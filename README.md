@@ -50,12 +50,15 @@ The technologies used to create this program were:
 <br><br>
 
 ## Screenshots
-```
 
 Initial Mobile Display   |  Results Mobile Display
 :-------------------------:|:-------------------------:
 ![Screenshot](assets/images/screenshot.png)  |  ![Screenshot](assets/images/screenshot.png)
 
+
+Initial Desktop Display:
+
+Results Desktop Display:
 
 <br>
 
@@ -72,7 +75,9 @@ Initial Mobile Display   |  Results Mobile Display
 ## Contact
 
 ## Team G.A.F
-[Jamie Capadocia](https://github.com/jcapadocia3) - [Jeffery Wojciechowski](https://github.com/Jefferywojo98) - [Sadie ***S***ial](https://github.com/sadielinks) - 
+[Jamie Capadocia](https://github.com/jcapadocia3) +
+[Jeffery Wojciechowski](https://github.com/Jefferywojo98) + 
+[Sadie Sial](https://github.com/sadielinks)
 
 <br>
 
