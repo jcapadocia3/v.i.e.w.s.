@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.pun {
+    text-align: center;
+}
+
+.loginForm {
+    text-align: center;
+    width: 30%;
+    padding: 70px 0px 70px 0px;
+    border: 2px solid black;
+}
+
+.mb-3 {
+    margin: auto;
+    width: 75%;
+}
+
+.register {
+    text-align: center;
+    padding-top: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .loginForm {
+        width: 90%;
+    }
+  }
