@@ -1,7 +1,7 @@
-<!-- ------------------------------------- -->
-<!-- This will be the main.handlebars file -->
-<!-- This will be the root route -->
-<!-- ------------------------------------- -->
+<!-- -------------------------------------------------------- -->
+<!-- This will be the main.handlebars file in /views/layouts  -->
+<!-- This will be the root route ---------------------------- -->
+<!-- -------------------------------------------------------- -->
 
 
 <!DOCTYPE html>
@@ -25,15 +25,15 @@
       <p class="pun">"May the forest be with you..."</p>
    </header>
    <main>
-      <div class="loginForm container">
-         <form>
+      <div class="loginFormDiv container">
+         <form class="login-form">
             <div class="mb-3">
-              <label for="emailInput" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+              <label for="email-login" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label for="passwordInput" class="form-label">Password:</label>
-              <input type="password" class="form-control" id="passwordInput">
+              <label for="password-login" class="form-label">Password:</label>
+              <input type="password" class="form-control" id="password-login">
             </div>
             <!-- Login button/event listener will direct user to /homepage -->
             <button type="submit" class="btn btn-primary">Login</button>
@@ -48,6 +48,9 @@
          <a href="url">Continue as guest</a>
       </div>
    </main>
+
+   <script src="./public/js/login.js"></script>
+
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
