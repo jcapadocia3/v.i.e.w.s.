@@ -70,7 +70,7 @@ h1 {
 }
 
 @media screen and (max-width: 992px) {
-    .loginForm {
+    .loginFormDiv {
         width: 90%;
     }
     .search-form {
