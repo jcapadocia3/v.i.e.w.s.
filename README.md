@@ -28,21 +28,22 @@ This is a WORK IN PROGRESS ✨
 ```
 AS SOMEONE that would like to hike in (SPECIFIC AREA),
 I WANT to be able to view trails in (SPECIFIC AREA),
-SO I CAN find trail-specific information to help me decide where to hike based on elevation, the average length of the trail, and fellow hiker’s review of the trail.
+SO I CAN find trail-specific information to help me decide where to hike based on elevation, 
+the average length of the trail, and fellow hiker’s review of the trail.
 ```
 
 
 ## Installation
-
+- 
 
 
 ## Usage
-
+- 
 
 
 ## Technologies
 
-The technologies used to create this program were: 
+### The technologies used to create this program were: 
 - 
 - 
 - 
@@ -74,7 +75,7 @@ Results Desktop Display:
 
 ## Contact
 
-## Team G.A.F
+Team G.A.F is:
 [Jamie Capadocia](https://github.com/jcapadocia3) +
 [Jeffery Wojciechowski](https://github.com/Jefferywojo98) + 
 [Sadie Sial](https://github.com/sadielinks)
