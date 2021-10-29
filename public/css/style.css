@@ -14,6 +14,16 @@ h1 {
     border: 2px solid black;
 }
 
+.search-form {
+    margin: auto;
+    width: 50%;
+}
+
+.form-control {
+    text-align: center;
+    margin-right: 5px;
+}
+
 .mb-3 {
     margin: auto;
     width: 75%;
@@ -24,8 +34,58 @@ h1 {
     padding-top: 15px;
 }
 
+.main-body {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid black;
+}
+
+.left-body {
+    width: 180%;
+    border: 2px solid black;
+}
+
+.right-body {
+    border: 2px solid black;
+}
+
+.imgOpp {
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+.trailMap {
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+.trailInfo {
+    border: 2px solid black;
+}
+
+.reviews {
+    border: 2px solid black;
+    /* display: inline-block; */
+}
+
 @media screen and (max-width: 992px) {
     .loginForm {
         width: 90%;
+    }
+    .search-form {
+        width: 85%;
+    }
+    .main-body {
+        display: flex;
+    }
+    .main-body {
+        display: block;
+    }
+    .left-body {
+        width: 100%;
+    }
+    .trailInfo {
+        margin-bottom: 10px;
     }
   }
