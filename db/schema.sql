@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS mural_db;
+CREATE DATABASE mural_db;
