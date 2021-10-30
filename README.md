@@ -26,10 +26,11 @@ This is a WORK IN PROGRESS ✨
 ### User Story:
 
 ```
-AS SOMEONE that would like to hike in (SPECIFIC AREA),
-I WANT to be able to view trails in (SPECIFIC AREA),
-SO I CAN find trail-specific information to help me decide where to hike based on elevation, 
-the average length of the trail, and fellow hiker’s review of the trail.
+AS SOMEONE that is visiting the wonderful City of Chicago,
+I WANT to be able to view murals in (SPECIFIC AREA),
+SO I CAN find what the mural looks like, how to get there, the artist’s info, 
+the media they used, and when the mural was completed.
+
 ```
 
 
