@@ -1,9 +1,3 @@
-<!-- -------------------------------------------------------- -->
-<!-- This will be the main.handlebars file in /views/layouts  -->
-<!-- This will be the root route ---------------------------- -->
-<!-- -------------------------------------------------------- -->
-
-
 <!DOCTYPE html>
 <html lang="en-US">
    
@@ -29,29 +23,33 @@
       <p class="pun">"May the forest be with you..."</p>
    </header>
    <main>
-      </div>
-      <div class="loginFormDiv container">
-         <form class="login-form">
-            <div class="mb-3">
-              <label for="email-login" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+        <div class="input-group search-form">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="main-body container">
+            <div class="left-body container">
+                <div class="imgOpp container">
+                    <p>Picture Opportunities</p>
+                    <img src="https://via.placeholder.com/150" alt="text" width="100%">
+                </div>
+                <div class="trailMap container">
+                    <p>Trail Map Image(blury login to Continue)</p>
+                    <img src="https://via.placeholder.com/150" alt="text" width="100%">
+                </div>
+                <div class="trailInfo container">
+                    <p>Location: </p>
+                </div>
             </div>
-            <div class="mb-3">
-              <label for="password-login" class="form-label">Password:</label>
-              <input type="password" class="form-control" id="password-login">
+            <div class="right-body container">
+                <div class="reviews container">
+                    <p>Rating: </p>
+                    <p>Login to Continue </p>
+                </div>
             </div>
-            <!-- Login button/event listener will direct user to /homepage -->
-            <button type="submit" class="btn btn-primary">Login</button>
-         </form>
-      </div>
-      <div class="register">
-         <!-- href "url" is a placeholder -->
-         <!-- Link will direct user to /signup -->
-         <p>Not registered? <a href="url">Register now!</a></p>
-         <!-- href "url" is a placeholder -->
-         <!-- Link will direct user to /homepage-guest -->
-         <a href="url">Continue as guest</a>
-      </div>
+        </div>
    </main>
 
    <script src="./public/js/login.js"></script>
