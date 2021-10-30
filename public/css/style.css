@@ -22,12 +22,8 @@ header, .project:not(:last-child) {
     font-weight: bold;
     margin-left: -5px;
   }
-  
 
-
-
-
-  /* h1 {
+h1 {
     text-align: center;
     padding-top: 100px;
     color: white;
@@ -108,8 +104,8 @@ background-size: 100%;
 
 .reviews {
     border: 2px solid black;
-    /* display: inline-block; */
-/* }
+    display: inline-block;
+}
 
 @media screen and (max-width: 992px) {
     .loginFormDiv {
@@ -130,4 +126,4 @@ background-size: 100%;
     .trailInfo {
         margin-bottom: 10px;
     }
-  }  */
+  }
