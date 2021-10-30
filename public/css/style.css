@@ -27,20 +27,29 @@ header, .project:not(:last-child) {
 
 
 
-/* h1 {
+  /* h1 {
     text-align: center;
     padding-top: 100px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .pun {
     text-align: center;
+    color: white;
 }
 
+.loginwallpaper{
+background-image: url("../../asset/IMG_4459.jpg");
+background-repeat: none;
+background-size: 100%;
+}
 .loginFormDiv {
     text-align: center;
     width: 30%;
     padding: 70px 0px 70px 0px;
     border: 2px solid black;
+    background-color: white;
 }
 
 .search-form {
@@ -61,8 +70,12 @@ header, .project:not(:last-child) {
 .register {
     text-align: center;
     padding-top: 15px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
+ .register a{
+     text-decoration: none;
+ }
 .main-body {
     display: flex;
     padding-top: 20px;
@@ -96,7 +109,7 @@ header, .project:not(:last-child) {
 .reviews {
     border: 2px solid black;
     /* display: inline-block; */
-/* } 
+/* }
 
 @media screen and (max-width: 992px) {
     .loginFormDiv {
@@ -117,4 +130,4 @@ header, .project:not(:last-child) {
     .trailInfo {
         margin-bottom: 10px;
     }
-  } */
+  }  */
