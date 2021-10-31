@@ -33,6 +33,7 @@ seedDatabase();
 //     "artwork_title": "West Town in bloom",
 //     "year_installed": "2019",
 //     "location_description": "1914 W. Chicago Ave"
+//     '_image_URL': ''
 //   },
 //   {
 //     "mural_registration_id": "19239",
@@ -40,6 +41,7 @@ seedDatabase();
 //     "artwork_title": "An Ode to Eleanor (Youth)",
 //     "year_installed": "2019",
 //     "street_address": "835 W Montrose Ave"
+//     '_image_URL': 'https://ibb.co/mh6ZpW0'
 //   },
 //   {
 //     "mural_registration_id": "19245",
@@ -48,6 +50,7 @@ seedDatabase();
 //     "media": "paint",
 //     "year_installed": "2017",
 //     "street_address": "1651-53 W North Ave"
+//     '_image_URL': ''
 //   },
 //   {
 //     "mural_registration_id": "19150",
@@ -56,5 +59,8 @@ seedDatabase();
 //     "year_installed": "2018",
 //     "location_description": "Cards Against Humanity HQ",
 //     "street_address": "1551 W Homer Street"
+//     '_image_URL': 'https://ibb.co/KsjX3KM'
 //   }
 // ]
+
+// hope to hyperlink the photos that display to artist blog/social media etc.
