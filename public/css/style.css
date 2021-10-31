@@ -36,9 +36,15 @@ h1 {
 }
 
 .loginwallpaper{
-background-image: url("../../asset/IMG_4459.jpg");
+background-image: url("../../assets/images/chicago_sadie.jpg");
+
 background-repeat: none;
 background-size: 100%;
+}
+.searchwallpaper{
+    background-image: url("../../assets/images/Screen\ Shot\ 2021-10-31\ at\ 12.43.47\ PM.png");
+    background-repeat: none;
+    background-size: 100%;
 }
 .loginFormDiv {
     text-align: center;
@@ -66,8 +72,8 @@ background-size: 100%;
 .register {
     text-align: center;
     padding-top: 15px;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: black;
+    
 }
  .register a{
      text-decoration: none;
