@@ -1,12 +1,11 @@
 const router = require('express').Router();
 
-// API token + variables
-apiKey = "a61kll6mp4sc4toyfx7atfuw1";
-var queryURL =
-  "https://data.cityofchicago.org/resource/we8h-apcf.json" + apiKey;
-var userSearch = "";
-var myData = undefined;
-
+// // API token + variables TO BE PROTECTED WITH .ENV FILE / work in progress heh
+// apiKey = process.env.MURAL_API_KEY;
+// var queryURL =
+//   "https://data.cityofchicago.org/resource/we8h-apcf.json" + apiKey;
+// var userSearch = "";
+// var myData = undefined;
 
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
