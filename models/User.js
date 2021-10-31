@@ -1,3 +1,4 @@
+// this model is ready to use per CLI response
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
