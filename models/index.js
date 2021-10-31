@@ -1,3 +1,4 @@
+// update Project once updated Murals.js (currently Project.js) is running on insomnia properly (presumed to be when seeds are set)
 const User = require('./User');
 const Project = require('./Project');
 
