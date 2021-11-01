@@ -8,16 +8,14 @@
       <a href="/project/{{project.id}}">{{project.name}}</a>
     </h2>
     <p>
-      <span for="img" aria-label="money">💲</span>
       <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
+      <span class="dollar-amount">Artist:  {{project.description}}</span>
     </p>
     <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      {{project.description}}
+      Year Installed: {{project.needed_funding}}
     </p>
   </div>
 </div>
