@@ -11,11 +11,11 @@
       <!-- Pass needed_funding value to the helper function -->
       <span class="dollar-amount">Artist:  {{project.description}}</span>
     </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+    {{!-- <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p> --}}
   </div>
   <div class="col-md-7">
     <p>
-      Year Installed: {{project.needed_funding}}
+      {{project.description}} installed this mural in {{project.needed_funding}}
     </p>
   </div>
 </div>
