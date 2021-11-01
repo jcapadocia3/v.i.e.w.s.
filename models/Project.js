@@ -15,18 +15,22 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // change to artist name
     description: {
       type: DataTypes.STRING,
     },
+    // not all of the API contains start dates
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    // change to year_installed, change to integer
     needed_funding: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
+    // need to also add: street addy + art description if in the API(?)+ image holder
     user_id: {
       type: DataTypes.INTEGER,
       references: {

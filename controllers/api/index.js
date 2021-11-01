@@ -4,5 +4,6 @@ const projectRoutes = require('./projectRoutes');
 
 router.use('/users', userRoutes);
 router.use('/projects', projectRoutes);
+// router.use(/'reviews', reviewsRoutes);
 
 module.exports = router;
