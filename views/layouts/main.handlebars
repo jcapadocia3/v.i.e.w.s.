@@ -1,4 +1,4 @@
-{{!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,12 +26,12 @@
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
+        {{!-- {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
-        {{/if}}
+        {{/if}} --}}
       </nav>
     </header>
     <main>
@@ -65,15 +65,15 @@
   </div>
 
   <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}}
   <script src="/js/logout.js"></script>
-  {{/if}}
+  {{/if}} --}}
 
   <script src="./public/js/login.js"></script>
 
 </body>
 
-</html> --}}
+</html>
 
 
 
@@ -105,7 +105,7 @@
 
 
 
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -148,4 +148,4 @@
   {{/if}}
 </body>
 
-</html>
+</html> --}}
