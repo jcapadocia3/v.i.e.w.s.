@@ -3,18 +3,20 @@
     "name": "An Ode to Eleanor (Youth)",
     "artist": "Steven Teller",
     "year_installed": 2019,
-    "zip": 60640
+    "zip": 60640,
+    "address": "testing"
   },
   {
     "name": "Cards Against Humanity Mural",
     "artist": "Afrokilla",
     "year_installed": 2018,
-    "zip": 60640
+    "zip": 60640,
+    "address": "testing"
   },
   {
     "name": "HowWillYouRise",
     "artist": "Jenny Vyas",
     "year_installed": 2019,
-    "zip": 60640
+    "address": "testing"
   }
 ]

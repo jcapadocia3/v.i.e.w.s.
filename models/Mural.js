@@ -11,21 +11,22 @@ Mural.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    // artwork title
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // change to artist name
+    // credited artist
     artist: {
       type: DataTypes.STRING,
     },
-    // not all of the API contains start dates
+    // 
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    // change to year_installed, change to integer
+    // year the artwork was installed
     year_installed: {
       type: DataTypes.FLOAT,
       allowNull: false,
@@ -41,7 +42,10 @@ Mural.init(
     },
     zip: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+    },
+    // full address vs zip...?
+    address: {
+      type: DataTypes.STRING,
     },
   },
   {
