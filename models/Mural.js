@@ -37,6 +37,11 @@ Mural.init(
         model: 'user',
         key: 'id',
       },
+    
+    },
+    zip: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   },
   {
