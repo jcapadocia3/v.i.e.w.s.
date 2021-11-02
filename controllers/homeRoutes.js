@@ -51,8 +51,8 @@ router.get('/mural/:id', async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 
-router.get('/profile', (req, res) => {
-    res.render('profile');
+router.get('/homepage', (req, res) => {
+    res.render('homepage');
 });
 
 // router.get('/profile', withAuth, async (req, res) => {
