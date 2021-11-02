@@ -11,10 +11,5 @@ Mural.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Review.belongsTo(Mural, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-})
 
-
-module.exports = { User, Mural, Review };
+module.exports = { User, Mural };

@@ -19,12 +19,7 @@ const seedDatabase = async () => {
       ...mural,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
-  },
-
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  }
 
   process.exit(0);
 };
