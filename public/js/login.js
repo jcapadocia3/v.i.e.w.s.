@@ -1,4 +1,6 @@
 const loginFormHandler = async (event) => {
+  console.log("CLICK!");
+  // debugger;
   event.preventDefault();
   document.location.replace('/profile');
 };
