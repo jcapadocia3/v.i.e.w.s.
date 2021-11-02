@@ -26,7 +26,7 @@ Mural.init(
       defaultValue: DataTypes.NOW,
     },
     // change to year_installed, change to integer
-    needed_funding: {
+    year_installed: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
