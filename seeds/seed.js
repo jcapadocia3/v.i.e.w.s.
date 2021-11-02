@@ -3,7 +3,8 @@ const { User, Mural } = require('../models');
 
 const userData = require('./userData.json');
 const muralData = require('./muralData.json');
-// const reviewData = require('./reviewData.json');
+const reviewData = require('./reviewData.json');
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
