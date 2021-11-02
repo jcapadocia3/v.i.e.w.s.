@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Mural, User } = require('../models');
 const withAuth = require('../utils/auth');
+// const homepage = require('../public/html/homepage.html');
 
 router.get('/', async (req, res) => {
   try {
@@ -51,11 +52,13 @@ router.get('/mural/:id', async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 
-router.get('/homepage', (req, res) => {
-    res.render('homepage');
+router.get('/home', (req, res) => {
+  console.log("it works!");
+  debugger;
+  res.render('homepage');
 });
 
-// router.get('/profile', withAuth, async (req, res) => {
+// router.get('/homepage', withAuth, async (req, res) => {
 //   try {
 //     // Find the logged in user based on the session ID
 //     const userData = await User.findByPk(req.session.user_id, {
@@ -65,7 +68,7 @@ router.get('/homepage', (req, res) => {
 
 //     const user = userData.get({ plain: true });
 
-//     res.render('profile', {
+//     res.render('homepage', {
 //       ...user,
 //       logged_in: true
 //     });
