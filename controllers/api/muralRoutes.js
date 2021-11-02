@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Mural } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newMural = await Mural.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newProject);
+    res.status(200).json(newMural);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.destroy({
+    const muralData = await Mural.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!muralData) {
+      res.status(404).json({ message: 'There is no mural found with this id! Please try again.' });
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(muralData);
   } catch (err) {
     res.status(500).json(err);
   }
