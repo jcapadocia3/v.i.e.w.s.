@@ -1,4 +1,99 @@
-<!-- Loop over each object in the murals array -->
+<!DOCTYPE html>
+<html lang="en-US">
+   
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bulma -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap"rel="stylesheet">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <!-- CSS -->
+   <link rel="stylesheet" href="/css/style.css">
+   <title>MURALS!!</title>
+</head>
+   
+<body>
+   <header>
+      <h1>MURALS</h1>
+      <p class="pun">"Lorem ipsum....."</p>
+   </header>
+   <main>
+        <div class="input-group search-form">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="main-body container">
+            <div class="left-body container">
+                <div class="muralImgs container">
+                    <p>Mural Images</p>
+                    <img src="https://via.placeholder.com/150" alt="text" width="100%">
+                </div>
+                <div class="muralInfo container">
+                    <p>Mural Information</p>
+                    <img src="https://via.placeholder.com/150" alt="text" width="100%">
+                </div>
+            </div>
+            <div class="right-body container">
+                <div class="reviews container">
+                    <p>Rating: </p>
+                    <p>Lorem ipsum....</p>
+                </div>
+            </div>
+        </div>
+   </main>
+
+   <script src="/js/profile.js"></script>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+   
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <!-- Loop over each object in the murals array -->
 {{#each murals as |mural| }}
 <div class="row mb-4 mural">
   <div class="col-md-5">
@@ -21,4 +116,29 @@
     </p>
   </div>
 </div>
-{{/each}}
+{{/each}} --}}
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{format_amount year_installed}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div> --}}
