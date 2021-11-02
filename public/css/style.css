@@ -1,7 +1,7 @@
-header,
+/* header,
 .mural:not(:last-child) {
   border-bottom: 1px solid #ccc;
-}
+} */
 
 .no-button {
   background: none;
@@ -39,7 +39,6 @@ h1 {
 
 .loginwallpaper {
   background-image: url("../../assets/images/chicago_sadie.jpg");
-
   background-repeat: none;
   background-size: 100%;
 }
@@ -84,17 +83,17 @@ h1 {
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .left-body {
   width: 180%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
-.right-body {
+/* .right-body {
   border: 2px solid black;
-}
+} */
 
 .muralImgs {
   margin-bottom: 10px;
@@ -109,6 +108,21 @@ h1 {
 .reviews {
   border: 2px solid black;
   display: inline-block;
+}
+
+.muralImgsTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.muralInfoTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.reviewsTitle {
+  text-align: center;
+  font-size: 25px;
 }
 
 @media screen and (max-width: 992px) {
