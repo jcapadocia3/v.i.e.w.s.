@@ -13,10 +13,13 @@ Review.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
-    description: {
+    review: {
       type: DataTypes.STRING,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
     },
   },
   {

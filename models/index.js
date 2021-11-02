@@ -1,5 +1,6 @@
 const User = require('./User');
 const Mural = require('./Mural');
+const Review = require('./Review');
 
 User.hasMany(Mural, {
   foreignKey: 'user_id',
@@ -9,5 +10,6 @@ User.hasMany(Mural, {
 Mural.belongsTo(User, {
   foreignKey: 'user_id'
 });
+
 
 module.exports = { User, Mural };

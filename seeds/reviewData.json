@@ -1,14 +1,17 @@
 [
     {
       "name": "test1",
-      "description": "test1"
+      "rating": "test1",
+      "review": 5
     },
     {
       "name": "test2",
-      "description": "test2"
+      "rating": "test1",
+      "review": 5
     },
     {
       "name": "test3",
-      "description": "test3"
+      "rating": "test1",
+      "review": 5
     }
   ]
