@@ -16,7 +16,7 @@ Mural.init(
       allowNull: false,
     },
     // change to artist name
-    description: {
+    artist: {
       type: DataTypes.STRING,
     },
     // not all of the API contains start dates
