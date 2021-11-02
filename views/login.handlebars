@@ -1,0 +1,49 @@
+<div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>Chicago Murals</h1>
+      <p class="pun">"Lorem ipsum......"</p>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{!-- {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}} --}}
+      </nav>
+    </header>
+    <main>
+      <div class="loginFormDiv container">
+         <form class="login-form">
+            <div class="mb-3">
+              <label for="email-login" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="password-login" class="form-label">Password:</label>
+              <input type="password" class="form-control" id="password-login">
+            </div>
+            <!-- Login button/event listener will direct user to /homepage -->
+            <button type="submit" class="btn btn-primary">Login</button>
+         </form>
+         <div class="register">
+            <!-- href "url" is a placeholder -->
+            <!-- Link will direct user to /signup -->
+            <p>Not registered? <a href="url">Register now!</a></p>
+            <!-- href "url" is a placeholder -->
+            <!-- Link will direct user to /homepage-guest -->
+            <a href="url">Continue as guest</a>
+         </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{!-- {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}} --}}
+
+
+  <script src="/js/login.js"></script>

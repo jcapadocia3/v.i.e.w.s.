@@ -1,0 +1,133 @@
+header,
+.mural:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.pun {
+  text-align: center;
+  color: black;
+}
+
+.loginwallpaper {
+  background-image: url("../../assets/images/chicago_sadie.jpg");
+
+  background-repeat: none;
+  background-size: 100%;
+}
+.searchwallpaper {
+  background-image: url("../../assets/images/Screen\ Shot\ 2021-10-31\ at\ 12.43.47\ PM.png");
+  background-repeat: none;
+  background-size: 100%;
+}
+.loginFormDiv {
+  text-align: center;
+  width: 30%;
+  padding: 70px 0px 70px 0px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.search-form {
+  margin: auto;
+  width: 50%;
+}
+
+.form-control {
+  text-align: center;
+  margin-right: 5px;
+}
+
+.mb-3 {
+  margin: auto;
+  width: 75%;
+}
+
+.register {
+  text-align: center;
+  padding-top: 15px;
+  color: black;
+}
+
+.register a {
+  text-decoration: none;
+}
+.main-body {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 2px solid black;
+}
+
+.left-body {
+  width: 180%;
+  border: 2px solid black;
+}
+
+.right-body {
+  border: 2px solid black;
+}
+
+.muralImgs {
+  margin-bottom: 10px;
+  border: 2px solid black;
+}
+
+.muralInfo {
+  margin-bottom: 10px;
+  border: 2px solid black;
+}
+
+.reviews {
+  border: 2px solid black;
+  display: inline-block;
+}
+
+@media screen and (max-width: 992px) {
+  .loginFormDiv {
+    width: 90%;
+  }
+  .search-form {
+    width: 85%;
+  }
+  .main-body {
+    display: flex;
+  }
+  .main-body {
+    display: block;
+  }
+  .left-body {
+    width: 100%;
+  }
+  .trailInfo {
+    margin-bottom: 10px;
+  }
+}
