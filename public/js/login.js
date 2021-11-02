@@ -2,7 +2,7 @@ const loginFormHandler = async (event) => {
   console.log("CLICK!");
   // debugger;
   event.preventDefault();
-  document.location.replace('/profile');
+  document.location.replace('/home');
 };
 
 //   // Collect values from the login form
