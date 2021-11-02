@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Mural } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const muralData = require('./muralData.json');
 // const reviewData = require('./reviewData.json');
 
 const seedDatabase = async () => {
@@ -13,9 +13,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  for (const mural of muralData) {
+    await Mural.create({
+      ...mural,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
@@ -26,8 +26,7 @@ const seedDatabase = async () => {
 seedDatabase();
 
 
-// // BELOW THIS IS JSON, BUT!! JSON files do not allow comments. Placeholder area for muralData.json (currently projectData.json) for merge rzns
-// [
+// // BELOW THIS IS JSON, BUT!! JSON files do not allow comments.
 //   {
 //     "mural_registration_id": "19304",
 //     "artist_credit": "Ouizi",

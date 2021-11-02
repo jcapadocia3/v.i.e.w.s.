@@ -1,14 +1,13 @@
-// update Project once updated Murals.js (currently Project.js) is running on insomnia properly (presumed to be when seeds are set)
 const User = require('./User');
-const Project = require('./Project');
+const Mural = require('./Mural');
 
-User.hasMany(Project, {
+User.hasMany(Mural, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
+Mural.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Project };
+module.exports = { User, Mural };
