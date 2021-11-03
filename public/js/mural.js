@@ -103,3 +103,4 @@ const searchInput = $('#search-input')
 // save searches
 // const table2 = $(".table-section2");
 // const appendSearch = $(".search-wrapper");
+
