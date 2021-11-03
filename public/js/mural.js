@@ -88,3 +88,14 @@ const reviewHandler = async (event) => {
 document
   .querySelector('.reviewForm')
   .addEventListener('submit', reviewHandler);
+  
+// WEB API - AJAX call + functions to follow:
+// declare API variables:
+apiKey = '5ht1h6zfn446h3vl2t1a4n2p7';
+const queryURL = 'https://data.cityofchicago.org/resource/we8h-apcf.json' + apiKey;
+const userSearch = '';
+const myData = undefined;
+
+// decalre variables based on html
+const searchMuralBtn = $('mural-search-button');
+const table = $(".table-section");
