@@ -104,3 +104,21 @@ const searchInput = $('#search-input')
 // const table2 = $(".table-section2");
 // const appendSearch = $(".search-wrapper");
 
+// mural search:
+const muralArray = [];
+searchMuralBtn.click(function (e) {
+    e.preventDefault();
+    let callData = $(searchInput).val();
+    console.log(callData)
+    $.ajax({
+        url: `https://data.cityofchicago.org/resource/we8h-apcf.json?zip=${callData}`,
+        type: "GET",
+        data: {
+          "$limit" : 5000,
+          "$$app_token" : "6pe1GSCrYAZ3QqvO0ENylhgnA"
+        }
+    }).done(function(data) {
+      alert("Retrieved " + data.length + " records from the dataset!");
+      console.log(data);
+    });
+})
