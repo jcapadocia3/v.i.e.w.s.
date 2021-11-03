@@ -99,3 +99,7 @@ const myData = undefined;
 // decalre variables based on html
 const searchMuralBtn = $('mural-search-button');
 const table = $(".table-section");
+const searchInput = $('#search-input')
+// save searches
+// const table2 = $(".table-section2");
+// const appendSearch = $(".search-wrapper");
