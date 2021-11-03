@@ -120,5 +120,11 @@ searchMuralBtn.click(function (e) {
     }).done(function(data) {
       alert("Retrieved " + data.length + " records from the dataset!");
       console.log(data);
+      // IF there is no corresponding mural, let the user know
+      if (data.length === 0) {
+        let noMuralOut = "Zip Code" + callData + "does not contain any murals"
+        $("#tablebody").empty();
+        $("#tablebody").append(noZip);
+    }
     });
 })
