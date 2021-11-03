@@ -125,6 +125,12 @@ h1 {
   font-size: 25px;
 }
 
+.ratingDiv {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: 2px solid black;
+}
+
 @media screen and (max-width: 992px) {
   .loginFormDiv {
     width: 90%;
