@@ -128,7 +128,15 @@ h1 {
 .ratingDiv {
   text-align: center;
   padding: 10px 0 10px 0;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+}
+
+.reviewForm {
+  text-align: center;
+}
+
+.commentSubmit {
+  margin: 10px 0 0 0;
 }
 
 @media screen and (max-width: 992px) {
