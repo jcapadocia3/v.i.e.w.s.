@@ -1,0 +1,106 @@
+<header>
+  <h1>MURALS</h1>
+  <p class="pun">"Lorem ipsum....."</p>
+</header>
+<main>
+  <div class="input-group search-form">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button type="button" class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+  <div class="main-body container">
+    <div class="left-body container">
+      <div class="muralImgs container">
+        <h2 class="muralImgsTitle">Mural Images</h2>
+        <img src="https://via.placeholder.com/150" alt="text" width="100%" />
+      </div>
+      <div class="muralInfo container">
+        <h2 class="muralInfoTitle">Mural Information</h2>
+        <p>Lorem ipsum...</p>
+
+        {{#each murals as |mural|}}
+          <div class="row mb-4 mural">
+            <div class="col-md-5">
+              <h2>
+                <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+                {{{get_emoji}}}
+                <a href="/mural/{{mural.id}}">{{mural.name}}</a>
+              </h2>
+              <p>Created by {{mural.artist}}</p>
+            </div>
+            <div class="col-md-7">
+              <p>
+                {{mural.description}}
+              </p>
+            </div>
+          </div>
+        {{/each}}
+
+      </div>
+    </div>
+        <div class="right-body container">
+            <div class="reviews container">
+                <h2 class="reviewsTitle">Reviews</h2>
+                <div class="ratingDiv">
+                    <button class="rating btn btn-primary" type="submit">1</button>
+                    <button class="rating btn btn-primary" type="submit">2</button>
+                    <button class="rating btn btn-primary" type="submit">3</button>
+                    <button class="rating btn btn-primary" type="submit">4</button>
+                    <button class="rating btn btn-primary" type="submit">5</button>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/js/profile.js"></script>
+
+{{!-- <!-- Loop over each object in the murals array -->
+{{#each murals as |mural| }}
+<div class="row mb-4 mural">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/mural/{{mural.id}}">{{mural.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money">💲</span>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="dollar-amount">{{format_amount mural.year_installed}}</span>
+      needed!
+    </p>
+    <p>Created by {{mural.user.name}} on {{format_date mural.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{mural.description}}
+    </p>
+  </div>
+</div>
+{{/each}} --}}
+
+{{!-- <div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{format_amount year_installed}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div> --}}
