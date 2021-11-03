@@ -126,5 +126,22 @@ searchMuralBtn.click(function (e) {
         $("#tablebody").empty();
         $("#tablebody").append(noMuralOut);
     }
+          // FOR any results, display as such:
+          for (let i = 0; i < data.length; i ++)
+          console.log(data[i]);
+          muralArray.push(data[i].artwork_title)
+    
+          let makeMuralOutput =
+          data[i].artist_credit + 
+          data[i].year_installed + 
+          data[i].location_description +
+          data[i].street_address +
+          data[i].zip;
+    
+          let html = `<tr><td> ${makeMuralOutput} </tr></td>`;
+          $("#tablebody").empty();
+          $("#tablebody").append(html);
     });
+  console.log(muralArray);
 })
+console.log(muralArray);
