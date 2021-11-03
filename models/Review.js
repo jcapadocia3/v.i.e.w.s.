@@ -21,6 +21,20 @@ Review.init(
     rating: {
       type: DataTypes.INTEGER,
     },
+    mural_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'mural',
+        key: 'id',
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
+    }
+    }
   },
   {
     sequelize,
