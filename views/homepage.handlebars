@@ -23,6 +23,19 @@
       <div class="muralInfo container">
         <h2 class="muralInfoTitle">Mural Information</h2>
         <p>Lorem ipsum...</p>
+
+
+
+
+
+  {{#each murals as |mural| }}
+  <a href="/mural/{{mural.id}}">{{mural.name}}</a>
+  {{/each}}
+
+
+
+
+
       </div>
     </div>
     <div class="right-body container">
