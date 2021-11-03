@@ -21,7 +21,7 @@ const reviewHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/home');
+        console.log("111");
       } else {
         alert(response.statusText);
       }
@@ -35,7 +35,7 @@ const reviewHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/home');
+        console.log("222");
       } else {
         alert(response.statusText);
       }
@@ -49,7 +49,7 @@ const reviewHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/home');
+        console.log("333");
       } else {
         alert(response.statusText);
       }
@@ -63,7 +63,7 @@ const reviewHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/home');
+        console.log("444");
       } else {
         alert(response.statusText);
       }
@@ -77,7 +77,7 @@ const reviewHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/home');
+        console.log("555");
       } else {
         alert(response.statusText);
       }
