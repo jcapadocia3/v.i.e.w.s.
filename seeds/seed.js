@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Mural } = require('../models');
+const { User, Mural, Review } = require('../models');
 
 const userData = require('./userData.json');
 const muralData = require('./muralData.json');
@@ -18,6 +18,12 @@ const seedDatabase = async () => {
     await Mural.create({
       ...mural,
       user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+  for (const review of reviewData) {
+    await Review.create({
+      ...review,
     });
   }
 

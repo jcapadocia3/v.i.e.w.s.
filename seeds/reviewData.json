@@ -2,16 +2,22 @@
     {
       "name": "test1",
       "rating": "test1",
-      "review": 5
+      "review": 5,
+      "mural_id": 5,
+      "user_id": 2
     },
     {
       "name": "test2",
       "rating": "test1",
-      "review": 5
+      "review": 5,
+      "mural_id": 5,
+      "user_id": 2
     },
     {
       "name": "test3",
       "rating": "test1",
-      "review": 5
+      "review": 5,
+      "mural_id": 5,
+      "user_id": 2
     }
   ]
