@@ -124,7 +124,7 @@ searchMuralBtn.click(function (e) {
       if (data.length === 0) {
         let noMuralOut = "Zip Code" + callData + "does not contain any murals"
         $("#tablebody").empty();
-        $("#tablebody").append(noZip);
+        $("#tablebody").append(noMuralOut);
     }
     });
 })
