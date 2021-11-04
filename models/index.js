@@ -12,4 +12,4 @@ Mural.belongsTo(User, {
 });
 
 
-module.exports = { User, Mural };
+module.exports = { User, Mural, Review };
