@@ -1,3 +1,4 @@
+// module exports ?
 const reviewHandler = async (event) => {
     console.log("CLICK!");
     event.preventDefault();
@@ -131,13 +132,14 @@ $('#mural-search-button').on('click', function (e) {
       muralArray.push(data[i].artwork_title)
 
       let makeMuralOutput = 
-      "Artist: " +
+      data[i].artwork_title +
+      " is a mural by " +
       data[i].artist_credit + 
-      "Year Installed: " +
+      " in  " +
       data[i].year_installed + 
-      "Street Address: " +
+      " -  You can find this mural at " +
       data[i].street_address + 
-      "Zipcode: " +
+      " Chicago, IL           " +
       data[i].zip;
 
       let html = `<tr><td> ${makeMuralOutput} </tr></td>`;
@@ -148,3 +150,6 @@ $('#mural-search-button').on('click', function (e) {
     console.log(muralArray)
 });
 console.log(muralArray)
+
+
+// module.exports = ?

@@ -29,6 +29,23 @@
     </div>
     <div class="right-body container">
       <div class="reviews container">
+        {{#each murals as |mural|}}
+          <div class="row mb-4 mural">
+            <div class="col-md-5">
+              <h2>
+                <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+                {{{get_emoji}}}
+                <a href="/mural/{{mural.id}}">{{mural.name}}</a>
+              </h2>
+              <p>Created by {{mural.artist}}</p>
+            </div>
+            <div class="col-md-7">
+              <p>
+                {{mural.description}}
+              </p>
+            </div>
+          </div>
+        {{/each}}
         <h2 class="reviewsTitle">Reviews</h2>
         <p>Lorem ipsum....</p>
       </div>

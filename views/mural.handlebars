@@ -28,54 +28,79 @@
       </div>
       <div class="muralInfo container">
         <h2 class="muralInfoTitle">Mural Information</h2>
-        <p>Lorem ipsum...</p>
+
+{{!-- I PUT THIS TABLE HERE HEHEHEH --}}
+                  <table class="table-section2">
+                    <tbody id="tablebody">
+                      <tr>
+                        <td> API display
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+
 
         {{#each murals as |mural|}}
-        <div class="row mb-4 mural">
-          <div class="col-md-5">
-            <h2>
-              <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-              {{{get_emoji}}}
-              <a href="/mural/{{mural.id}}">{{mural.name}}</a>
-            </h2>
-            <p>Created by {{mural.artist}}</p>
-          </div>
-          <div class="col-md-7">
-            <p>
-              {{mural.description}}
-            </p>
+          <div class="row mb-4 mural">
+            <div class="col-md-5">
+              <h2>
+                <a href="/mural/{{mural.id}}">{{mural.name}}</a>
+              </h2>
+              <p>Created by {{mural.artist}}</p>
+            </div>
+            <div class="col-md-7">
+              <p>
+                {{mural.description}}
+              </p>
+            </div>
           </div>
         </div>
         {{/each}}
 
       </div>
     </div>
-    <div class="right-body container">
-      <div class="reviews container">
-        <h2 class="reviewsTitle">Reviews</h2>
-        <form class="reviewForm">
-          <div class="ratingDiv">
-            <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
-            <button id="rating2" class="rating2 btn btn-primary" type="submit">2</button>
-            <button id="rating3" class="rating3 btn btn-primary" type="submit">3</button>
-            <button id="rating4" class="rating4 btn btn-primary" type="submit">4</button>
-            <button id="rating5" class="rating5 btn btn-primary" type="submit">5</button>
+
+        <div class="right-body container">
+            <div class="reviews container">
+                <h2 class="reviewsTitle">Reviews</h2>
+                      {{#each reviews as |review|}}
+          <div class="row mb-4 mural">
+            <div class="col-md-5">
+              <h2>
+                {{review.review}}
+              </h2>
+              <p>Created by {{review.name}}</p>
+            </div>
+            <div class="col-md-7">
+            </div>
           </div>
-          <div class="commentForm mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
-            <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </div>
+        {{/each}}
+
+                <form class="reviewForm">
+                    <div class="ratingDiv">
+                        <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
+                        <button id="rating2" class="rating2 btn btn-primary" type="submit">2</button>
+                        <button id="rating3" class="rating3 btn btn-primary" type="submit">3</button>
+                        <button id="rating4" class="rating4 btn btn-primary" type="submit">4</button>
+                        <button id="rating5" class="rating5 btn btn-primary" type="submit">5</button>
+                    </div>
+                    <div class="commentForm mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
+                        <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
   </div>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="/js/mural.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/index.js"></script>
 
 {{!--
 <!-- Loop over each object in the murals array -->

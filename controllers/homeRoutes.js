@@ -45,21 +45,14 @@ router.get('/home', async (req, res) => {
 router.get('/mural/:id', async (req, res) => {
   try {
     // Get all murals and JOIN with user data
-    const muralData = await Mural.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    const reviewData = await Review.findAll();
 
     // Serialize data so the template can read it
-    const murals = muralData.map((mural) => mural.get({ plain: true }));
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('mural', { 
-      murals, 
+      reviews, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
