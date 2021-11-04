@@ -129,27 +129,30 @@ $('#mural-search-button').on('click', function (e) {
       // FOR any results, display as such:
       for (let i = 0; i < data.length; i++) {
     //   console.log(data[i]);
-      muralArray.push(data[i].artwork_title)
+      muralArray.push(data[i]);
 
       let makeMuralOutput = 
+      "Mural Title: " +
       data[i].artwork_title +
-      " is a mural by " +
+      "<br>" +
+      "Artist Name: " +
       data[i].artist_credit + 
-      " in  " +
+      "<br>" +
+      "Installment Year: " +
       data[i].year_installed + 
-      " -  You can find this mural at " +
+      "<br>" +
+      "Address: " +
       data[i].street_address + 
       " Chicago, IL           " +
-      data[i].zip;
+      data[i].zip +
+      "<br><br>";
 
-      let html = `<tr><td> ${makeMuralOutput} </tr></td>`;
-      $("#tablebody").empty();
+      let html = `<tr><td> ${makeMuralOutput} </td></tr>`;
       $("#tablebody").append(html);
     }
 });
-    console.log(muralArray)
+    // console.log(muralArray)
 });
-console.log(muralArray)
 
 
 // module.exports = ?
