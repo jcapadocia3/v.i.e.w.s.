@@ -99,3 +99,52 @@ const myData = undefined;
 // decalre variables based on html
 const searchMuralBtn = $('mural-search-button');
 const table = $(".table-section");
+const searchInput = $('#search-input')
+// save searches
+// const table2 = $(".table-section2");
+// const appendSearch = $(".search-wrapper");
+
+// mural search:
+const muralArray = [];
+$('#mural-search-button').on('click', function (e) {
+    e.preventDefault();
+    let callData = $("#search-input").val();
+    $.ajax({
+        url: `https://data.cityofchicago.org/resource/we8h-apcf.json?zip=${callData}`,
+
+        type: "GET",
+        data: {
+          $limit : 5000,
+          $$app_token : "wuWBoPJo0VvB887VUDjq8qYJ8"
+        }
+    }).done(function(data) {
+      alert("Retrieved " + data.length + " records from the dataset!");
+      console.log(data);
+      if (data.length === 0) {
+          let noMuralOut = "Zip Code" + callData + "does not contain any murals"
+          $("#tablebody").empty();
+          $("#tablebody").append(noMuralOut);
+      }
+      // FOR any results, display as such:
+      for (let i = 0; i < data.length; i++) {
+    //   console.log(data[i]);
+      muralArray.push(data[i].artwork_title)
+
+      let makeMuralOutput = 
+      "Artist: " +
+      data[i].artist_credit + 
+      "Year Installed: " +
+      data[i].year_installed + 
+      "Street Address: " +
+      data[i].street_address + 
+      "Zipcode: " +
+      data[i].zip;
+
+      let html = `<tr><td> ${makeMuralOutput} </tr></td>`;
+      $("#tablebody").empty();
+      $("#tablebody").append(html);
+    }
+});
+    console.log(muralArray)
+});
+console.log(muralArray)
