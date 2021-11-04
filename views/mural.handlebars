@@ -25,6 +25,21 @@
         <h2 class="muralInfoTitle">Mural Information</h2>
         <p>Lorem ipsum...</p>
 
+{{!-- I PUT THIS TABLE HERE HEHEHEH --}}
+                  <table class="table-section2">
+                    <tr>
+                      <th>Any additional info:</th>
+                    </tr>
+                    <tbody id="tablebody">
+                      <tr>
+                        <td> Search for a mural!
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+
+
         {{#each murals as |mural|}}
           <div class="row mb-4 mural">
             <div class="col-md-5">
@@ -67,10 +82,10 @@
     </div>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="/js/mural.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/index.js"></script>
 
 {{!-- <!-- Loop over each object in the murals array -->
 {{#each murals as |mural| }}

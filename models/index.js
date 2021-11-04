@@ -11,5 +11,9 @@ Mural.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+Review.belongsTo(Mural, {
+  foreignKey: 'mural_id',
+  foreignKey: 'user_id'
+})
 
 module.exports = { User, Mural, Review };
