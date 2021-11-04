@@ -7,10 +7,12 @@ const muralData = null;
 
 // Use withAuth middleware to prevent access to route
 
-router.get('/', (req, res) => {
-  console.log("it works!");
-  debugger;
-  res.render('login');
+router.get('/', withAuth, async (req, res) => {
+  try {
+      res.render('login')
+  } catch (err) {
+      res.status(500).json(err);
+  }
 });
 
 // router.get('/homepage', withAuth, async (req, res) => {
