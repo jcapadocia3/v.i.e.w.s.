@@ -3,6 +3,10 @@
   border-bottom: 1px solid #ccc;
 } */
 
+body {
+  background-image: url(./assets/images/black-and-white-chicago-skyline.jpg);
+}
+
 .no-button {
   background: none;
   border: none;
@@ -25,6 +29,7 @@
 }
 
 h1 {
+  font-size: 60px;
   text-align: center;
   padding-top: 100px;
   color: white;
@@ -33,6 +38,7 @@ h1 {
 }
 
 .pun {
+  font-size: 20px;
   text-align: center;
   color: black;
 }
@@ -52,6 +58,7 @@ h1 {
   width: 30%;
   padding: 70px 0px 70px 0px;
   border: 2px solid black;
+  border-radius: 5%;
   background-color: white;
 }
 
@@ -96,16 +103,19 @@ h1 {
 } */
 
 .muralImgs {
+  border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid black;
 }
 
 .muralInfo {
+  border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid black;
 }
 
 .reviews {
+  border-radius: 5px;
   border: 2px solid black;
   display: inline-block;
 }
