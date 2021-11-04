@@ -106,42 +106,45 @@ const searchInput = $('#search-input')
 
 // mural search:
 const muralArray = [];
-searchMuralBtn.click(function (e) {
+$('#mural-search-button').on('click', function (e) {
     e.preventDefault();
-    let callData = $(searchInput).val();
-    console.log(callData)
+    let callData = $("#search-input").val();
     $.ajax({
         url: `https://data.cityofchicago.org/resource/we8h-apcf.json?zip=${callData}`,
+
         type: "GET",
         data: {
-          "$limit" : 5000,
-          "$$app_token" : "6pe1GSCrYAZ3QqvO0ENylhgnA"
+          $limit : 5000,
+          $$app_token : "wuWBoPJo0VvB887VUDjq8qYJ8"
         }
     }).done(function(data) {
       alert("Retrieved " + data.length + " records from the dataset!");
       console.log(data);
-      // IF there is no corresponding mural, let the user know
       if (data.length === 0) {
-        let noMuralOut = "Zip Code" + callData + "does not contain any murals"
-        $("#tablebody").empty();
-        $("#tablebody").append(noMuralOut);
-    }
-          // FOR any results, display as such:
-          for (let i = 0; i < data.length; i ++)
-          console.log(data[i]);
-          muralArray.push(data[i].artwork_title)
-    
-          let makeMuralOutput =
-          data[i].artist_credit + 
-          data[i].year_installed + 
-          data[i].location_description +
-          data[i].street_address +
-          data[i].zip;
-    
-          let html = `<tr><td> ${makeMuralOutput} </tr></td>`;
+          let noMuralOut = "Zip Code" + callData + "does not contain any murals"
           $("#tablebody").empty();
-          $("#tablebody").append(html);
-    });
-  console.log(muralArray);
-})
-console.log(muralArray);
+          $("#tablebody").append(noMuralOut);
+      }
+      // FOR any results, display as such:
+      for (let i = 0; i < data.length; i++) {
+    //   console.log(data[i]);
+      muralArray.push(data[i].artwork_title)
+
+      let makeMuralOutput = 
+      "Artist: " +
+      data[i].artist_credit + 
+      "Year Installed: " +
+      data[i].year_installed + 
+      "Street Address: " +
+      data[i].street_address + 
+      "Zipcode: " +
+      data[i].zip;
+
+      let html = `<tr><td> ${makeMuralOutput} </tr></td>`;
+      $("#tablebody").empty();
+      $("#tablebody").append(html);
+    }
+});
+    console.log(muralArray)
+});
+console.log(muralArray)
