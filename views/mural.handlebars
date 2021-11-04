@@ -4,16 +4,21 @@
 </header>
 <main>
   <div class="input-group search-form">
-    <input
-      id="search-input"
-      class="form-control"
-      type="text"
-      placeholder="Search"
-      aria-label="Search"
-    />
-    <button type="button" id="mural-search-button" class="btn btn-primary">
-      <i class="fas fa-search"></i>
-    </button>
+    <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
+    <div class="bunchaBtns">
+      <button type="button" id="mural-search-button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="luckybutton" class="btn btn-primary align-center" type="button">
+        Random
+      </button>
+      <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
+        Zipcode
+      </button>
+      <button id="artistbutton" class="btn btn-primary align-center" type="button">
+        Artist
+      </button>
+    </div>
   </div>
   <div class="main-body container">
     <div class="left-body container">
@@ -50,10 +55,12 @@
               </p>
             </div>
           </div>
+        </div>
         {{/each}}
 
       </div>
     </div>
+
         <div class="right-body container">
             <div class="reviews container">
                 <h2 class="reviewsTitle">Reviews</h2>
@@ -87,6 +94,7 @@
             </div>
         </div>
     </div>
+  </div>
 </main>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -94,7 +102,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="assets/js/index.js"></script>
 
-{{!-- <!-- Loop over each object in the murals array -->
+{{!--
+<!-- Loop over each object in the murals array -->
 {{#each murals as |mural| }}
 <div class="row mb-4 mural">
   <div class="col-md-5">
