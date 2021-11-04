@@ -109,7 +109,10 @@ const searchInput = $('#search-input')
 const muralArray = [];
 $('#mural-search-button').on('click', function (e) {
     e.preventDefault();
+    $("#tablebody").empty();
+
     let callData = $("#search-input").val();
+    
     $.ajax({
         url: `https://data.cityofchicago.org/resource/we8h-apcf.json?zip=${callData}`,
 
