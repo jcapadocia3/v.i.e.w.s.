@@ -23,16 +23,12 @@
       </div>
       <div class="muralInfo container">
         <h2 class="muralInfoTitle">Mural Information</h2>
-        <p>Lorem ipsum...</p>
 
 {{!-- I PUT THIS TABLE HERE HEHEHEH --}}
                   <table class="table-section2">
-                    <tr>
-                      <th>Any additional info:</th>
-                    </tr>
                     <tbody id="tablebody">
                       <tr>
-                        <td> Search for a mural!
+                        <td> API display
                         </td>
                       </tr>
                     </tbody>
@@ -44,8 +40,6 @@
           <div class="row mb-4 mural">
             <div class="col-md-5">
               <h2>
-                <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-                {{{get_emoji}}}
                 <a href="/mural/{{mural.id}}">{{mural.name}}</a>
               </h2>
               <p>Created by {{mural.artist}}</p>
@@ -63,6 +57,19 @@
         <div class="right-body container">
             <div class="reviews container">
                 <h2 class="reviewsTitle">Reviews</h2>
+                      {{#each reviews as |review|}}
+          <div class="row mb-4 mural">
+            <div class="col-md-5">
+              <h2>
+                {{review.review}}
+              </h2>
+              <p>Created by {{review.name}}</p>
+            </div>
+            <div class="col-md-7">
+            </div>
+          </div>
+        {{/each}}
+
                 <form class="reviewForm">
                     <div class="ratingDiv">
                         <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>

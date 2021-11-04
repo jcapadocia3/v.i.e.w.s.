@@ -5,6 +5,6 @@ const muralRoutes = require('./muralRoutes');
 
 router.use('/users', userRoutes);
 router.use('/murals', muralRoutes);
-router.use('/reviews', reviewRoutes);
+router.use('/home', reviewRoutes);
 
 module.exports = router;
