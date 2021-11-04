@@ -89,16 +89,6 @@ router.get('/login', async (req, res) => {
   }
 });
 
-// router.get('/login', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/profile');
-//     return;
-//   }
-
-//   res.render('login');
-// });
-
 router.get('/reviews', async (req, res) => {
   try {
       res.render('login')
@@ -106,15 +96,5 @@ router.get('/reviews', async (req, res) => {
       res.status(500).json(err);
   }
 });
-
-// router.get('/reviews', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/profile');
-//     return;
-//   }
-
-//   res.render('login');
-// });
 
 module.exports = router;
