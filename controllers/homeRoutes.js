@@ -45,7 +45,12 @@ router.get('/home', async (req, res) => {
 router.get('/mural/:id', async (req, res) => {
   try {
     // Get all murals and JOIN with user data
-    const reviewData = await Review.findAll();
+    const reviewData = await Review.findAll({
+      where:{
+        mural_id: req.params.id,
+      }
+
+    });
 
     // Serialize data so the template can read it
     const reviews = reviewData.map((review) => review.get({ plain: true }));
