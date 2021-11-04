@@ -36,6 +36,14 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/home', async (req, res) => {
   try {
+      res.render('homepage')
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.get('/mural/:id', async (req, res) => {
+  try {
     // Get all murals and JOIN with user data
     const muralData = await Mural.findAll({
       include: [
@@ -53,28 +61,6 @@ router.get('/home', async (req, res) => {
     res.render('homepage', { 
       murals, 
       logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/mural/:id', async (req, res) => {
-  try {
-    const muralData = await Mural.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const mural = muralData.get({ plain: true });
-
-    res.render('mural', {
-      ...mural,
-      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
