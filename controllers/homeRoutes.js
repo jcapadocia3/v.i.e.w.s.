@@ -58,7 +58,7 @@ router.get('/mural/:id', async (req, res) => {
     const murals = muralData.map((mural) => mural.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
+    res.render('mural', { 
       murals, 
       logged_in: req.session.logged_in 
     });
