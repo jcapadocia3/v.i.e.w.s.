@@ -96,9 +96,9 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-router.get('/home', async (req, res) => {
+router.get('/home/users/:id', async (req, res) => {
   try {
-      res.render('guesthomepage')
+      res.render('login')
   } catch (err) {
       res.status(500).json(err);
   }
