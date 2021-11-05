@@ -163,6 +163,11 @@ h1 {
   margin: 10px 0 0 0;
 }
 
+.rating__star {
+  color: gold;
+  font-size: 30px;
+}
+
 @media screen and (max-width: 992px) {
   .loginFormDiv {
     width: 90%;
