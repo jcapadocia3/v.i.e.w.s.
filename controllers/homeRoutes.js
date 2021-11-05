@@ -104,6 +104,29 @@ router.get('/home/users/:id', async (req, res) => {
   }
 });
 
+router.post('/review', async (req, res) => {
+  try {
+    // Get all murals and JOIN with user data
+    const reviewData = await Review.findAll({
+      where:{
+        mural_id: req.params.id,
+      }
+
+    });
+
+    // Serialize data so the template can read it
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('mural', { 
+      reviews, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
 
 // heroku test
