@@ -26,7 +26,7 @@ Review.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    
+    // foreign key from mural.js
     mural_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -34,7 +34,7 @@ Review.init(
         key: 'id',
       },
     },
-
+    // foreign key from user.js
     user_id: {
       type: DataTypes.INTEGER,
       references: {
