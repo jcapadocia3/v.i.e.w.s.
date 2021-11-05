@@ -7,6 +7,19 @@ body {
   background-image: url(./assets/images/black-and-white-chicago-skyline.jpg);
 }
 
+h1 {
+  font-size: 60px;
+  text-align: center;
+  /* padding-top: 100px; */
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#logout {
+  margin: 20px 20px 20px 0;
+}
+
 .no-button {
   background: none;
   border: none;
@@ -26,15 +39,6 @@ body {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
-}
-
-h1 {
-  font-size: 60px;
-  text-align: center;
-  padding-top: 100px;
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
 }
 
 .pun {
