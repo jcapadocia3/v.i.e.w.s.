@@ -26,7 +26,7 @@ Review.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-
+    
     mural_id: {
       type: DataTypes.INTEGER,
       references: {
