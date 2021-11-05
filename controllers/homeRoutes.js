@@ -107,23 +107,16 @@ router.get('/home/users/:id', async (req, res) => {
 router.post('/review', async (req, res) => {
   try {
     // Get all murals and JOIN with user data
-    const reviewData = await Review.findAll({
-      where:{
-        mural_id: req.params.id,
-      }
-
+    const reviewData = await Review.create({
+      ...req.body,
+      // rating: req.body.rating,
+      user_id: req.session.user_id,
     });
-
-    // Serialize data so the template can read it
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('mural', { 
-      reviews, 
-      logged_in: req.session.logged_in 
-    });
+    res.status(200).json(reviewData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
