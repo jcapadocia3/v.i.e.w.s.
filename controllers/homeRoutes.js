@@ -7,22 +7,33 @@ const muralData = null;
 
 // Use withAuth middleware to prevent access to route
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-      res.render('login')
+      res.render('login');
   } catch (err) {
       res.status(500).json(err);
   }
 });
 
-router.get('/home/users/:id', async (req, res) => {
+router.get('/home/users/:id', withAuth, async (req, res) => {
   try {
-      res.render('homepage')
+
+    const loginData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Mural }],
+    });
+
+    const user = loginData.get({ plain: true });
+
+      res.render('homepage', {
+        ...user,
+      logged_in: true
+      });
 
       const userData = await User.findAll({
         where:{
           id: req.params.id,
-        }
+        },
       });
 
   } catch (err) {
