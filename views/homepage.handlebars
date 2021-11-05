@@ -1,33 +1,59 @@
 <header>
+   <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-right logout-button">
+            <button type="button" class="btn btn-primary">logout</button>
+        </div>
+    </div>
+</div>
   <h1>MURALS</h1>
-  <p class="pun">"Lorem ipsum....."</p>
+  <p class="pun">"Etched in tone..."</p>
 </header>
 <main>
   <div class="input-group search-form">
-    <input
-      class="form-control"
-      type="text"
-      placeholder="Search"
-      aria-label="Search"
-    />
-    <button type="button" class="btn btn-primary">
-      <i class="fas fa-search"></i>
-    </button>
+    <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
+    <div class="bunchaBtns">
+      <button type="button" id="mural-search-button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="luckybutton" class="btn btn-primary align-center" type="button">
+        Random
+      </button>
+      <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
+        Zipcode
+      </button>
+      <button id="artistbutton" class="btn btn-primary align-center" type="button">
+        Artist
+      </button>
+    </div>
   </div>
   <div class="main-body container">
     <div class="left-body container">
-      <div class="muralImgs container">
-        <p>Mural Images</p>
-        <img src="https://via.placeholder.com/150" alt="text" width="100%" />
-      </div>
       <div class="muralInfo container">
-        <p>Mural Information</p>
-        <img src="https://via.placeholder.com/150" alt="text" width="100%" />
+        <h2 class="muralInfoTitle">Mural Image</h2>
+        <p>Lorem ipsum...</p>
       </div>
     </div>
     <div class="right-body container">
       <div class="reviews container">
-        <p>Rating: </p>
+        {{#each murals as |mural|}}
+          <div class="row mb-4 mural">
+            <div class="col-md-5">
+              <h2>
+                <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+                {{{get_emoji}}}
+                <a href="/mural/{{mural.id}}">{{mural.name}}</a>
+              </h2>
+              <p>Created by {{mural.artist}}</p>
+            </div>
+            <div class="col-md-7">
+              <p>
+                {{mural.description}}
+              </p>
+            </div>
+          </div>
+        {{/each}}
+        <h2 class="reviewsTitle">Reviews</h2>
         <p>Lorem ipsum....</p>
       </div>
     </div>
@@ -51,7 +77,8 @@
 
 
 
-{{!-- <!-- Loop over each object in the murals array -->
+{{!--
+<!-- Loop over each object in the murals array -->
 {{#each murals as |mural| }}
 <div class="row mb-4 mural">
   <div class="col-md-5">

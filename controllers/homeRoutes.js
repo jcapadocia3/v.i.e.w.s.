@@ -1,26 +1,62 @@
 const router = require('express').Router();
-const { Mural, User } = require('../models');
+const { Mural, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 // const homepage = require('../public/html/homepage.html');
 
+const muralData = null;
+
+// Use withAuth middleware to prevent access to route
+
 router.get('/', async (req, res) => {
   try {
-    // Get all murals and JOIN with user data
-    const muralData = await Mural.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
+      res.render('login');
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.get('/home/users/:id', withAuth, async (req, res) => {
+  try {
+
+    const loginData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Mural }],
+    });
+
+    const user = loginData.get({ plain: true });
+
+      res.render('homepage', {
+        ...user,
+      logged_in: true
+      });
+
+      const userData = await User.findAll({
+        where:{
+          id: req.params.id,
         },
-      ],
+      });
+
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.get('/mural/:id', async (req, res) => {
+  try {
+    // Get all murals and JOIN with user data
+    const reviewData = await Review.findAll({
+      where:{
+        mural_id: req.params.id,
+      }
+
     });
 
     // Serialize data so the template can read it
-    const murals = muralData.map((mural) => mural.get({ plain: true }));
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('login', { 
-      murals, 
+    res.render('mural', { 
+      reviews, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -28,73 +64,30 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/mural/:id', async (req, res) => {
+router.get('/login', async (req, res) => {
   try {
-    const muralData = await Mural.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const mural = muralData.get({ plain: true });
-
-    res.render('mural', {
-      ...mural,
-      logged_in: req.session.logged_in
-    });
+      res.render('login')
   } catch (err) {
-    res.status(500).json(err);
+      res.status(500).json(err);
+  }
+}); 
+
+router.get('/signup', async (req, res) => {
+  try {
+      res.render('signup')
+  } catch (err) {
+      res.status(500).json(err);
   }
 });
 
-// Use withAuth middleware to prevent access to route
-
-router.get('/home', (req, res) => {
-  console.log("it works!");
-  debugger;
-  res.render('homepage');
-});
-
-// router.get('/homepage', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
-
-//     const user = userData.get({ plain: true });
-
-//     res.render('homepage', {
-//       ...user,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
+router.get('/home', async (req, res) => {
+  try {
+      res.render('guesthomepage')
+  } catch (err) {
+      res.status(500).json(err);
   }
-
-  res.render('login');
-});
-
-router.get('/reviews', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-
-  res.render('login');
 });
 
 module.exports = router;
+
+// heroku test

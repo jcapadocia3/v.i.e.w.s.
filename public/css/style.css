@@ -1,6 +1,10 @@
-header,
+/* header,
 .mural:not(:last-child) {
   border-bottom: 1px solid #ccc;
+} */
+
+body {
+  background-image: url(./assets/images/black-and-white-chicago-skyline.jpg);
 }
 
 .no-button {
@@ -25,6 +29,7 @@ header,
 }
 
 h1 {
+  font-size: 60px;
   text-align: center;
   padding-top: 100px;
   color: white;
@@ -33,13 +38,13 @@ h1 {
 }
 
 .pun {
+  font-size: 20px;
   text-align: center;
   color: black;
 }
 
 .loginwallpaper {
   background-image: url("../../assets/images/chicago_sadie.jpg");
-
   background-repeat: none;
   background-size: 100%;
 }
@@ -48,11 +53,22 @@ h1 {
   background-repeat: none;
   background-size: 100%;
 }
+
 .loginFormDiv {
   text-align: center;
   width: 30%;
   padding: 70px 0px 70px 0px;
   border: 2px solid black;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.signupFormDiv {
+  text-align: center;
+  width: 30%;
+  padding: 70px 0px 70px 0px;
+  border: 2px solid black;
+  border-radius: 5%;
   background-color: white;
 }
 
@@ -84,37 +100,74 @@ h1 {
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .left-body {
   width: 180%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
-.right-body {
+/* .right-body {
   border: 2px solid black;
-}
+} */
 
 .muralImgs {
+  border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid black;
 }
 
 .muralInfo {
+  border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid black;
 }
 
 .reviews {
+  border-radius: 5px;
   border: 2px solid black;
   display: inline-block;
+}
+
+.muralImgsTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.muralInfoTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.reviewsTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.ratingDiv {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  /* border: 2px solid black; */
+}
+
+.reviewForm {
+  text-align: center;
+}
+
+.commentSubmit {
+  margin: 10px 0 0 0;
 }
 
 @media screen and (max-width: 992px) {
   .loginFormDiv {
     width: 90%;
   }
+
+  .signupFormDiv {
+    width: 90%;
+  }
+
   .search-form {
     width: 85%;
   }
