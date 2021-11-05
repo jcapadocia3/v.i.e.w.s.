@@ -6,6 +6,10 @@
     <main>
       <div class="signupFormDiv container">
          <form class="signup-form">
+           <div class="mb-3">
+              <label for="userId-signup" class="form-label">Name:</label>
+              <input type="userId" class="form-control" id="userId-login" aria-describedby="signupemailHelp">
+            </div>
             <div class="mb-3">
               <label for="email-signup" class="form-label">Email:</label>
               <input type="email" class="form-control" id="email-login" aria-describedby="signupemailHelp">
@@ -14,11 +18,11 @@
               <label for="password-signup" class="form-label">Password:</label>
               <input type="password" class="form-control" id="password-signup">
             </div>
-            <div class="mb-3">
+            {{!-- <div class="mb-3">
               <label for="repeat-password-signup" class="form-label">Repeat Password:</label>
               <input type="password" class="form-control" id="repeat-password-signup">
-            </div>
-            <p>You already signup? <a href="url">Sign in</a></p>
+            </div> --}}
+            <p>You already signup? <a href="/login">Sign in</a></p>
             <button type="submit" class="btn btn-primary">Signup</button>
          </form>        
         </div>
