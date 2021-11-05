@@ -29,22 +29,27 @@ Review.init(
     // foreign key from mural.js
     mural_id: {
       type: DataTypes.INTEGER,
+      // mural.id
       references: {
         model: 'mural',
         key: 'id',
       },
     },
+
     // foreign key from user.js
     user_id: {
       type: DataTypes.INTEGER,
+      // user.id
       references: {
         model: 'user',
         key: 'id',
        },
       },
+
     // foreign key from user.js
     user_name: {
       type: DataTypes.STRING,
+      // user.name
       references: {
         model: 'user',
         key: 'name',
