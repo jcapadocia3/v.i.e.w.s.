@@ -19,10 +19,12 @@ Review.init(
 
     review: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
 
     rating: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
 
     mural_id: {

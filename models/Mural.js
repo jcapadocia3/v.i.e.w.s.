@@ -20,12 +20,6 @@ Mural.init(
     artist: {
       type: DataTypes.STRING,
     },
-    // 
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
     // year the artwork was installed
     year_installed: {
       type: DataTypes.FLOAT,
