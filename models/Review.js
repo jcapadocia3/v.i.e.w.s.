@@ -47,14 +47,14 @@ Review.init(
       },
 
     // foreign key from user.js
-    user_name: {
-      type: DataTypes.STRING,
-      // user.name
-      references: {
-        model: 'user',
-        key: 'name',
-      },
-      }
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   // user.name
+    //   references: {
+    //     model: 'user',
+    //     key: 'name',
+    //   },
+    //   }
       
 
     },
