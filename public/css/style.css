@@ -53,7 +53,17 @@ h1 {
   background-repeat: none;
   background-size: 100%;
 }
+
 .loginFormDiv {
+  text-align: center;
+  width: 30%;
+  padding: 70px 0px 70px 0px;
+  border: 2px solid black;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.signupFormDiv {
   text-align: center;
   width: 30%;
   padding: 70px 0px 70px 0px;
@@ -153,6 +163,11 @@ h1 {
   .loginFormDiv {
     width: 90%;
   }
+
+  .signupFormDiv {
+    width: 90%;
+  }
+
   .search-form {
     width: 85%;
   }
