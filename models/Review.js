@@ -41,7 +41,16 @@ Review.init(
         model: 'user',
         key: 'id',
        },
+      },
+    // foreign key from user.js
+    user_name: {
+      type: DataTypes.STRING,
+      references: {
+        model: 'user',
+        key: 'name',
+      },
       }
+      
 
     },
 
