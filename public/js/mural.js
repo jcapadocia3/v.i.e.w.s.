@@ -1,30 +1,31 @@
 // module exports ?
 
-const rateMe1 = async (event) => {
-  console.log("CLICK!");
+const commentHandler = async (event) => {
+  console.log("raddddddd!");
+  // debugger;
   event.preventDefault();
   // document.location.replace('/home');
 
-  const rating1 = document.querySelector("#rating1");
+  const comment = document.querySelector("#commentInput").value.trim();
 
-  if (rating1) {
+  if (comment) {
     // Send a POST request to the API endpoint
     const response = await fetch("/review", {
       method: "POST",
-      body: JSON.stringify({ rating1 }),
+      body: JSON.stringify({ review: comment, mural_id: 1 }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      console.log("111");
+      console.log("comment submitted");
     } else {
       alert(response.statusText);
     }
   }
 };
 
-document.querySelector(".rateMe1").addEventListener("submit", rateMe1);
+document.querySelector(".commentSubmit").addEventListener("click", commentHandler);
 
 
 
@@ -203,14 +204,21 @@ $("#mural-search-button").on("click", function (e) {
       $limit: 5000,
       $$app_token: "wuWBoPJo0VvB887VUDjq8qYJ8",
     },
-  }).done(function (data) {
-    alert("Retrieved " + data.length + " records from the dataset!");
-    console.log(data);
+  })
+  .done(function (data) {
+    // alert("Retrieved " + data.length + " records from the dataset!");
+    // console.log(data);
     if (data.length === 0) {
-      let noMuralOut = "Zip Code" + callData + "does not contain any murals";
-      $("#tablebody").empty();
-      $("#tablebody").append(noMuralOut);
-    }
+    //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
+    //   $("#tablebody").empty();
+    //   $("#tablebody").append(noMuralOut);
+    $(document).ready(function(){
+      $("#myModal").on("show.bs.modal", function(event){
+        // Place the returned HTML into the selected element
+        $(this).find(".modal-body");
+      });
+    });
+  }
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
       //   console.log(data[i]);

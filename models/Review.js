@@ -15,16 +15,12 @@ Review.init(
     // to DELETE once join successful
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
 
     review: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-
-    rating: {
-      type: DataTypes.INTEGER,
     },
     
     // foreign key from mural.js

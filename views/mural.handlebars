@@ -1,11 +1,11 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-right">
-        <button type="button" id="logout" class="btn btn-primary">logout</button>
-      </div>
+        <div class="col-md-12 text-right logout-button">
+            <button type="button" id="logout" class="btn btn-primary">logout</button>
+        </div>
     </div>
-  </div>
+</div>
   <h1>MURALS</h1>
   <p class="pun">"Lorem ipsum....."</p>
   <h1 class="text-center">welcome</h1>
@@ -14,9 +14,30 @@
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
     <div class="bunchaBtns">
-      <button type="button" id="mural-search-button" class="btn btn-primary">
+        <div class="bs-example">
+      <button type="button" id="mural-search-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
         <i class="fas fa-search"></i>
       </button>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mural Results</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be loaded here from "remote.php" file -->
+                    <p>hey loser</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
       <button id="luckybutton" class="btn btn-primary align-center" type="button">
         Random
       </button>
@@ -86,7 +107,10 @@
       {{/each}}
 
       <form class="rateMe1">
-        <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
+        {{!-- <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
+        <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button> --}}
+        <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
+        <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
       </form>
 
@@ -113,6 +137,7 @@
           <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
         </div>
       </form> --}}
+
     </div>
   </div>
   </div>
