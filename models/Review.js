@@ -25,7 +25,6 @@ Review.init(
 
     rating: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
     
     // foreign key from mural.js
