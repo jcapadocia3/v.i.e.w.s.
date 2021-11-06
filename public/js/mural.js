@@ -203,14 +203,21 @@ $("#mural-search-button").on("click", function (e) {
       $limit: 5000,
       $$app_token: "wuWBoPJo0VvB887VUDjq8qYJ8",
     },
-  }).done(function (data) {
-    alert("Retrieved " + data.length + " records from the dataset!");
-    console.log(data);
+  })
+  .done(function (data) {
+    // alert("Retrieved " + data.length + " records from the dataset!");
+    // console.log(data);
     if (data.length === 0) {
-      let noMuralOut = "Zip Code" + callData + "does not contain any murals";
-      $("#tablebody").empty();
-      $("#tablebody").append(noMuralOut);
-    }
+    //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
+    //   $("#tablebody").empty();
+    //   $("#tablebody").append(noMuralOut);
+    $(document).ready(function(){
+      $("#myModal").on("show.bs.modal", function(event){
+        // Place the returned HTML into the selected element
+        $(this).find(".modal-body");
+      });
+    });
+  }
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
       //   console.log(data[i]);
