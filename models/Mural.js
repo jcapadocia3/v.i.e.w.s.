@@ -45,9 +45,7 @@ Mural.init(
     address: {
       type: DataTypes.STRING,
     },
-    reviews: {
-      type: DataTypes.STRING,
-    },
+
   },
   {
     sequelize,
