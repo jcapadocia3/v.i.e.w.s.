@@ -1,7 +1,7 @@
 // module exports ?
 
 const commentHandler = async (event) => {
-  console.log("CLICK!");
+  console.log("raddddddd!");
   // debugger;
   event.preventDefault();
   // document.location.replace('/home');
@@ -12,7 +12,7 @@ const commentHandler = async (event) => {
     // Send a POST request to the API endpoint
     const response = await fetch("/review", {
       method: "POST",
-      body: JSON.stringify({ comment }),
+      body: JSON.stringify({ review: comment, mural_id: 1 }),
       headers: { "Content-Type": "application/json" },
     });
 
