@@ -12,12 +12,6 @@ Review.init(
       autoIncrement: true,
     },
 
-    // to DELETE once join successful
-    name: {
-      type: DataTypes.STRING,
-      // allowNull: false,
-    },
-
     review: {
       type: DataTypes.STRING,
       allowNull: false,
