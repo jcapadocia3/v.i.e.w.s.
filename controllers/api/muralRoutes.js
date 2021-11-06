@@ -35,4 +35,17 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    // Get all murals and JOIN with user data
+    const reviewData = await Review.findAll({
+      where:{
+        mural_id: req.params.id,
+      }
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

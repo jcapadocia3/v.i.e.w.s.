@@ -1,30 +1,31 @@
 // module exports ?
 
-const rateMe1 = async (event) => {
+const commentHandler = async (event) => {
   console.log("CLICK!");
+  // debugger;
   event.preventDefault();
   // document.location.replace('/home');
 
-  const rating1 = document.querySelector("#rating1");
+  const comment = document.querySelector("#commentInput").value.trim();
 
-  if (rating1) {
+  if (comment) {
     // Send a POST request to the API endpoint
     const response = await fetch("/review", {
       method: "POST",
-      body: JSON.stringify({ rating1 }),
+      body: JSON.stringify({ comment }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      console.log("111");
+      console.log("comment submitted");
     } else {
       alert(response.statusText);
     }
   }
 };
 
-document.querySelector(".rateMe1").addEventListener("submit", rateMe1);
+document.querySelector(".commentSubmit").addEventListener("click", commentHandler);
 
 
 
