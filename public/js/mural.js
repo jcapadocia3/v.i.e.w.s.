@@ -1,9 +1,7 @@
-// module exports ?
-
 const commentHandler = async (event) => {
   console.log("raddddddd!");
   // debugger;
-  event.preventDefault();
+  event.preventDefault()
   // document.location.replace('/home');
 
   const comment = document.querySelector("#commentInput").value.trim();
