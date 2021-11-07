@@ -1,8 +1,8 @@
 <header>
    <div class="container">
     <div class="row">
-        <div class="col-md-12 text-right logout-button">
-            <button type="button" id="logout" class="btn btn-primary">logout</button>
+        <div class="col-md-12 text-right ">
+            <button type="button" id="logout" class="btn btn-primary logout-button ">logout</button>
         </div>
     </div>
 </div>
@@ -12,10 +12,12 @@
 <main>
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
-    <div class="bunchaBtns">
-      <button type="button" id="mural-search-button" class="btn btn-primary">
+      <button type="button" id="mural-search-button" class="btn btn-primary search-button-color">
         <i class="fas fa-search"></i>
       </button>
+      <div class="container"> 
+        <div class="row">
+          <div class=" col text-center">
       <button id="luckybutton" class="btn btn-primary align-center" type="button">
         Random
       </button>
@@ -25,20 +27,23 @@
       <button id="artistbutton" class="btn btn-primary align-center" type="button">
         Artist
       </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="main-body container">
     <div class="left-body container">
       <div class="muralInfo container">
         <h2 class="muralInfoTitle">Mural Image</h2>
-        <p>Lorem ipsum...</p>
+        <p class="text-center">Lorem ipsum...</p>
       </div>
     </div>
     <div class="right-body container">
       <div class="reviews container">
         {{#each murals as |mural|}}
           <div class="row mb-4 mural">
-            <div class="col-md-5">
+            <div class="col-md-5 text-center">
               <h2>
                 <!-- Call helper function with triple brackets to render the emoji span as HTML -->
                 {{{get_emoji}}}
@@ -54,7 +59,7 @@
           </div>
         {{/each}}
         <h2 class="reviewsTitle">Reviews</h2>
-        <p>Lorem ipsum....</p>
+        <p class="text-center">Lorem ipsum....</p>
       </div>
     </div>
   </div>

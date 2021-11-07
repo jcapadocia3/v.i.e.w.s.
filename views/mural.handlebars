@@ -13,7 +13,6 @@
 <main>
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
-    <div class="bunchaBtns">
         <div class="bs-example">
       <button type="button" id="mural-search-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
         <i class="fas fa-search"></i>
@@ -38,6 +37,9 @@
     </div>
 
 </div>
+     <div class="container"> 
+        <div class="row">
+          <div class=" col text-center">
       <button id="luckybutton" class="btn btn-primary align-center" type="button">
         Random
       </button>
@@ -47,7 +49,9 @@
       <button id="artistbutton" class="btn btn-primary align-center" type="button">
         Artist
       </button>
-    </div>
+          </div>
+        </div>
+      </div>
   </div>
   <div class="main-body container">
     <div class="left-body container">
@@ -94,11 +98,11 @@
     <div class="reviews container">
       <h2 class="reviewsTitle">Reviews</h2>
       {{#each reviews as |review|}}
-      <div class="row mb-4 mural">
-        <div class="col-md-5">
-          <h2>
+      <div class="row mural">
+        <div class="col">
+          <h5 class="text-right">
             {{review.review}}
-          </h2>
+          </h5>
           <p>Created by {{review.name}}</p>
         </div>
         <div class="col-md-7">
@@ -106,12 +110,18 @@
       </div>
       {{/each}}
 
-      <form class="rateMe1">
+      <form class="rateMe1 text-center">
         {{!-- <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
         <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button> --}}
         <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
         <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
+        <div class="container">
+    <div class="row">
+        <div class=" text center">
+            <button type="sumbit" id="commentSubmit" class="commentSubmit btn btn-primary text-center">Sumbit</button>
+        </div>
+    </div>
+</div>
       </form>
 
       {{!-- <form class="reviewForm">

@@ -4,7 +4,7 @@
 } */
 
 body {
-  background-image: url(./assets/images/black-and-white-chicago-skyline.jpg);
+  background-color: #5215fc;
 }
 
 h1 {
@@ -34,30 +34,41 @@ h1 {
   color: #065b83;
   text-decoration: underline;
 }
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
-
 .pun {
   font-size: 20px;
   text-align: center;
   color: black;
 }
-
-.loginwallpaper {
-  background-image: url("../../assets/images/chicago_sadie.jpg");
-  background-repeat: none;
-  background-size: 100%;
+.btn{
+  background-color: #280886;
 }
-.searchwallpaper {
-  background-image: url("../../assets/images/Screen\ Shot\ 2021-10-31\ at\ 12.43.47\ PM.png");
-  background-repeat: none;
-  background-size: 100%;
+.btn:hover{
+  background-color: white;
+  color: #280886 ;
 }
-
+.commentSubmit:hover{
+  background-color: #280886;
+  color: white
+}
+.login-main-color:hover{ 
+  background-color: #280886;
+  color: white;
+}
+.color-text{
+  color: #280886; 
+}
+.color-text-links{
+  color: #280886;
+} 
+.color-text-links:hover{
+  text-decoration:none;
+  font-weight:bold;
+  color: #280886;
+}
+.signup-submit:hover{
+  background-color: #280886;
+  color: white;
+}
 .loginFormDiv {
   text-align: center;
   width: 30%;
@@ -75,7 +86,15 @@ h1 {
   border-radius: 5%;
   background-color: white;
 }
-
+.muralInfo{
+  background-color: white;
+}
+.reviews{
+  background-color:white ;
+}
+.muralImgs{
+  background-color: white;
+}
 .search-form {
   margin: auto;
   width: 50%;
