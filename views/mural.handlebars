@@ -1,11 +1,11 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-right logout-button">
-        <button type="button" id="logout" class="btn btn-primary">logout</button>
-      </div>
+        <div class="col-md-12 text-right logout-button">
+            <button type="button" id="logout" class="btn btn-primary">logout</button>
+        </div>
     </div>
-  </div>
+</div>
   <h1>MURALS</h1>
   <p class="pun">"Lorem ipsum....."</p>
   <h1 class="text-center">welcome</h1>
@@ -13,45 +13,45 @@
 <main>
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
-    <div class="bs-example">
+        <div class="bs-example">
       <button type="button" id="mural-search-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
         <i class="fas fa-search"></i>
       </button>
-      <!-- Modal HTML -->
-      <div id="myModal" class="modal fade" tabindex="-1">
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Mural Results</h5>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mural Results</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be loaded here from "remote.php" file -->
+                    <p>hey loser</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <!-- Content will be loaded here from "remote.php" file -->
-              <p>hey loser</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            </div>
+        </div>
+    </div>
+
+</div>
+     <div class="container"> 
+        <div class="row">
+          <div class=" col text-center">
+      <button id="luckybutton" class="btn btn-primary align-center" type="button">
+        Random
+      </button>
+      <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
+        Zipcode
+      </button>
+      <button id="artistbutton" class="btn btn-primary align-center" type="button">
+        Artist
+      </button>
           </div>
         </div>
       </div>
-
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class=" col text-center">
-          <button id="luckybutton" class="btn btn-primary align-center" type="button">
-            Find a mural for me!
-          </button>
-          {{!-- <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
-            Zipcode
-          </button>
-          <button id="artistbutton" class="btn btn-primary align-center" type="button">
-            Artist
-          </button> --}}
-        </div>
-      </div>
-    </div>
   </div>
   <div class="main-body container">
     <div class="left-body container">
@@ -66,7 +66,7 @@
         <table class="table-section2">
           <tbody id="tablebody">
             <tr>
-              <td>
+              <td> API display
               </td>
             </tr>
           </tbody>
@@ -75,14 +75,14 @@
 
 
         {{#each murals as |mural|}}
-        <div>
-          <div>
+        <div class="row mb-4 mural">
+          <div class="col-md-5">
             <h2>
               <a href="/mural/{{mural.id}}">{{mural.name}}</a>
             </h2>
             <p>Created by {{mural.artist}}</p>
           </div>
-          <div>
+          <div class="col-md-7">
             <p>
               {{mural.description}}
             </p>
@@ -98,12 +98,14 @@
     <div class="reviews container">
       <h2 class="reviewsTitle">Reviews</h2>
       {{#each reviews as |review|}}
-      <div>
-        <div>
-          <h5>
+      <div class="row mural">
+        <div class="col">
+          <h5 class="text-right">
             {{review.review}}
           </h5>
-          <p>Review by {{review.name}}</p>
+          <p>Created by {{review.name}}</p>
+        </div>
+        <div class="col-md-7">
         </div>
       </div>
       {{/each}}
@@ -114,12 +116,12 @@
         <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
         <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         <div class="container">
-          <div class="row">
-            <div class=" text center">
-              <button type="sumbit" id="commentSubmit" class="commentSubmit btn btn-primary text-center">Submit</button>
-            </div>
-          </div>
+    <div class="row">
+        <div class=" text center">
+            <button type="sumbit" id="commentSubmit" class="commentSubmit btn btn-primary text-center">Sumbit</button>
         </div>
+    </div>
+</div>
       </form>
 
       {{!-- <form class="reviewForm">
