@@ -23,11 +23,14 @@ const commentHandler = async (event) => {
   }
 };
 
-document.querySelector(".commentSubmit").addEventListener("click", commentHandler);
-
-
 
 // WEB API - AJAX call + functions to follow:
+
+// handler for mural zip codes:
+document.querySelector(".commentSubmit").addEventListener("click", commentHandler);
+// handler for mural name:
+document.querySelector(".").addEventListener("click", commentHandler);
+
 // declare API variables:
 apiKey = "5ht1h6zfn446h3vl2t1a4n2p7";
 const queryURL =
