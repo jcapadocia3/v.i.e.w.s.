@@ -20,7 +20,10 @@ h1 {
     1px 1px 0 #000;
 }
 body{
-  background: #ffe1c8
+  background-color: #D7E5F0;
+}
+html{
+  background-color: #D7E5F0;
 }
 #logout {
   margin: 20px 20px 20px 0;
@@ -50,26 +53,34 @@ body{
   color: black;
 }
 .btn{
-  background-color: tomato;
-  border-color: black;
+  background-color: lightslategray ;
+  border-color: #D7E5F0;
+  color: #D7E5F0;
 }
 .btn:hover{
-  background-color: white;
+  background-color: #D7E5F0;
+  color: lightslategrey
 }
 
 .commentSubmit:hover{
   color: white
 }
+.search-button-color:hover{
+  color: lightslategrey;
+  border-color: black;
+  background: white;
+}
 
 .login-main-color {
-  color: white;
-  background-color: black;
+  color: lightslategrey;
+  background-color: #D7E5F0;
   border-color: black;
 }
 
 .login-main-color:hover{ 
-  color: tomato;
+  color: lightslategrey;
   border-color: black;
+  background: white;
 }
 
 .color-text-links{
@@ -78,7 +89,7 @@ body{
 
 .color-text-links:hover{
   text-decoration:none;
-  color: tomato;
+  color: lightslategrey;
 }
 
 .boldFont {
@@ -86,7 +97,7 @@ body{
 }
 
 .signup-submit:hover{
-  background-color: tomato;
+  background-color: lightslategrey;
   color: white;
 }
 .loginFormDiv {
