@@ -17,7 +17,10 @@
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
     <div class="bs-example">
       <button type="button" id="mural-search-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        <i class="fas fa-search"></i>
+        Zip Code <i class="fas fa-search"></i>
+      </button>
+      <button type="button" id="mural-title-button" class="btn btn-primary">
+        Title <i class="fas fa-search"></i>
       </button>
       <!-- Modal HTML -->
       <div id="myModal" class="modal fade" tabindex="-1">
@@ -59,7 +62,7 @@
     <div class="left-body container">
       <div class="muralImgs container">
         <h2 class="muralImgsTitle">Mural Images</h2>
-    <%= typeof msg != 'undefined' ? msg : '' %>
+    <span %= typeof msg != 'undefined' ? msg : '' %></span>
     <form action="/mural/:id" method="POST" enctype="multipart/form-data">
       <div class="file-field input-field">
         <div class="btn ">
