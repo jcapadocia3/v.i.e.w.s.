@@ -19,7 +19,9 @@ h1 {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
-
+body{
+  background: #ffe1c8
+}
 #logout {
   margin: 20px 20px 20px 0;
 }
@@ -47,7 +49,10 @@ h1 {
   text-align: center;
   color: black;
 }
-
+.btn{
+  background-color: tomato;
+  border-color: black;
+}
 .btn:hover{
   background-color: white;
 }
