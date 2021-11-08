@@ -1,11 +1,11 @@
 <header>
   <div class="container">
     <div class="row">
-        <div class="col-md-12 text-right logout-button">
-            <button type="button" id="logout" class="btn btn-primary">logout</button>
-        </div>
+      <div class="col-md-12 text-right logout-button">
+        <button type="button" id="logout" class="btn btn-primary">logout</button>
+      </div>
     </div>
-</div>
+  </div>
   <h1>MURALS</h1>
   <p class="pun">"Lorem ipsum....."</p>
   <h1 class="text-center">welcome</h1>
@@ -13,45 +13,45 @@
 <main>
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
-        <div class="bs-example">
+    <div class="bs-example">
       <button type="button" id="mural-search-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
         <i class="fas fa-search"></i>
       </button>
-    <!-- Modal HTML -->
-    <div id="myModal" class="modal fade" tabindex="-1">
+      <!-- Modal HTML -->
+      <div id="myModal" class="modal fade" tabindex="-1">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Mural Results</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <!-- Content will be loaded here from "remote.php" file -->
-                    <p>hey loser</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Mural Results</h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-        </div>
-    </div>
-
-</div>
-     <div class="container"> 
-        <div class="row">
-          <div class=" col text-center">
-      <button id="luckybutton" class="btn btn-primary align-center" type="button">
-        Random
-      </button>
-      <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
-        Zipcode
-      </button>
-      <button id="artistbutton" class="btn btn-primary align-center" type="button">
-        Artist
-      </button>
+            <div class="modal-body">
+              <!-- Content will be loaded here from "remote.php" file -->
+              <p>hey loser</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class=" col text-center">
+          <button id="luckybutton" class="btn btn-primary align-center" type="button">
+            Find a mural for me!
+          </button>
+          {{!-- <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
+            Zipcode
+          </button>
+          <button id="artistbutton" class="btn btn-primary align-center" type="button">
+            Artist
+          </button> --}}
+        </div>
+      </div>
+    </div>
   </div>
   <div class="main-body container">
     <div class="left-body container">
@@ -66,7 +66,7 @@
         <table class="table-section2">
           <tbody id="tablebody">
             <tr>
-              <td> API display
+              <td>
               </td>
             </tr>
           </tbody>
@@ -75,14 +75,14 @@
 
 
         {{#each murals as |mural|}}
-        <div class="row mb-4 mural">
-          <div class="col-md-5">
+        <div>
+          <div>
             <h2>
               <a href="/mural/{{mural.id}}">{{mural.name}}</a>
             </h2>
             <p>Created by {{mural.artist}}</p>
           </div>
-          <div class="col-md-7">
+          <div>
             <p>
               {{mural.description}}
             </p>
@@ -98,14 +98,12 @@
     <div class="reviews container">
       <h2 class="reviewsTitle">Reviews</h2>
       {{#each reviews as |review|}}
-      <div class="row mural">
-        <div class="col">
-          <h5 class="text-right">
+      <div>
+        <div>
+          <h5>
             {{review.review}}
           </h5>
-          <p>Created by {{review.name}}</p>
-        </div>
-        <div class="col-md-7">
+          <p>Review by {{review.name}}</p>
         </div>
       </div>
       {{/each}}
@@ -116,38 +114,13 @@
         <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
         <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         <div class="container">
-    <div class="row">
-        <div class=" text center">
-            <button type="sumbit" id="commentSubmit" class="commentSubmit btn btn-primary text-center">Sumbit</button>
+          <div class="row">
+            <div class=" text center">
+              <button type="sumbit" id="commentSubmit" class="commentSubmit btn btn-primary text-center">Submit</button>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
       </form>
-
-      {{!-- <form class="reviewForm">
-        <div class="rating">
-          <i class="rating__star far fa-star"></i>
-          <i class="rating__star far fa-star"></i>
-          <i class="rating__star far fa-star"></i>
-          <i class="rating__star far fa-star"></i>
-          <i class="rating__star far fa-star"></i>
-          <button type="submit" id="ratingSubmit" class="ratingSubmit btn btn-primary">Submit</button>
-        </div>
-        <div class="ratingDiv">
-          <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
-          <button id="rating2" class="rating2 btn btn-primary" type="submit">2</button>
-          <button id="rating3" class="rating3 btn btn-primary" type="submit">3</button>
-          <button id="rating4" class="rating4 btn btn-primary" type="submit">4</button>
-          <button id="rating5" class="rating5 btn btn-primary" type="submit">5</button>
-          <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
-        </div>
-        <div class="commentForm mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
-          <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button>
-        </div>
-      </form> --}}
-
     </div>
   </div>
   </div>
