@@ -223,16 +223,16 @@ $("#mural-search-button").on("click", function (e) {
       muralArray.push(data[i]);
 
       let makeMuralOutput =
-        `<span class="muralStuff">Mural Title: </span>` +
+        "Mural Title: " +
         data[i].artwork_title +
         "<br>" +
-        `<span class="muralStuff">Artist Name: </span>` +
+        "Artist Name: " +
         data[i].artist_credit +
         "<br>" +
-        `<span class="muralStuff">Installment Year: </span>` +
+        "Installment Year: " +
         data[i].year_installed +
         "<br>" +
-        `<span class="muralStuff">Address: </span>` +
+        "Address: " +
         data[i].street_address +
         " Chicago, IL           " +
         data[i].zip +
