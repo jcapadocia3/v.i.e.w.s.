@@ -1,8 +1,10 @@
 <header>
   <div class="container">
-    <div class="row">
+    <div class="row ">
       <div class="col-md-12 text-right logout-button">
-        <button type="button" id="logout" class="btn btn-primary">logout</button>
+        <button type="button" id="logout" class="btn btn-primary align-right">logout</button>
+        <div class="col-md-12 align-right">
+        <button type="button" id="home" class="btn btn-primary home-button align-right">home</button>
       </div>
     </div>
   </div>
@@ -57,6 +59,21 @@
     <div class="left-body container">
       <div class="muralImgs container">
         <h2 class="muralImgsTitle">Mural Images</h2>
+    <%= typeof msg != 'undefined' ? msg : '' %>
+    <form action="/mural/:id" method="POST" enctype="multipart/form-data">
+      <div class="file-field input-field">
+        <div class="btn ">
+          <span>File</span>
+          <input name="myImage" type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <br>
+    <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
         <img src="https://via.placeholder.com/150" alt="text" width="100%" />
       </div>
       <div class="muralInfo container">
