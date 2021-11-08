@@ -115,9 +115,16 @@ h1 {
   background-color: white;
 }
 
+.testing {
+  display: flex;
+  width: 100%;
+  /* border: 2px solid black; */
+}
+
 .search-form {
   margin: auto;
   width: 50%;
+  /* border: 2px solid black; */
 }
 
 .form-control {
@@ -218,6 +225,10 @@ h1 {
   }
 
   .signupFormDiv {
+    width: 90%;
+  }
+
+  .muralSearch2 {
     width: 90%;
   }
 
