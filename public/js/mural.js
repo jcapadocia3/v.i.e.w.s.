@@ -46,7 +46,7 @@ const searchInput = $("#search-input");
 // const table2 = $(".table-section2");
 // const appendSearch = $(".search-wrapper");
 
-// mural search:
+// mural search by zip:
 const muralArray = [];
 $("#mural-search-button").on("click", function (e) {
   e.preventDefault();
@@ -104,4 +104,3 @@ $("#mural-search-button").on("click", function (e) {
   });
   // console.log(muralArray)
 });
-
