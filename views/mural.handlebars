@@ -1,16 +1,14 @@
 <header>
   <div class="container">
     <div class="row ">
-      <div class="col-md-12 text-right logout-button">
-        <button type="button" id="logout" class="btn btn-primary align-right">logout</button>
-        <div class="col-md-12 align-right">
+      <div class="col-md-12 text-right nav-bar">
         <button type="button" id="home" class="btn btn-primary home-button align-right">home</button>
+        <button type="button" id="logout" class="btn btn-primary align-right">logout</button>
       </div>
     </div>
-  </div>
-  <h1>MURALS</h1>
-  <p class="pun">"Lorem ipsum....."</p>
-  <h1 class="text-center">welcome</h1>
+    <h1>MURALS</h1>
+    <p class="pun">"Lorem ipsum....."</p>
+    <h1 class="text-center">welcome</h1>
 </header>
 <main>
   <div class="input-group search-form">
@@ -62,21 +60,21 @@
     <div class="left-body container">
       <div class="muralImgs container">
         <h2 class="muralImgsTitle">Mural Images</h2>
-    <span %= typeof msg != 'undefined' ? msg : '' %></span>
-    <form action="/mural/:id" method="POST" enctype="multipart/form-data">
-      <div class="file-field input-field">
-        <div class="btn ">
-          <span>File</span>
-          <input name="myImage" type="file">
-        </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
-        </div>
-      </div>
-      <button type="submit" class="btn">Submit</button>
-    </form>
-    <br>
-    <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
+        <span %=typeof msg !='undefined' ? msg : '' %></span>
+        <form action="/mural/:id" method="POST" enctype="multipart/form-data">
+          <div class="file-field input-field">
+            <div class="btn ">
+              <span>File</span>
+              <input name="myImage" type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <br>
+        <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
         <img src="https://via.placeholder.com/150" alt="text" width="100%" />
       </div>
       <div class="muralInfo container">
