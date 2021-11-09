@@ -35,12 +35,14 @@ const commentHandler = async (event) => {
   // document.location.replace('/home');
 
   const comment = document.querySelector("#commentInput").value.trim();
+  // const idArray = [];
 
   if (comment) {
+    const id = asd();
     // Send a POST request to the API endpoint
     const response = await fetch("/review", {
       method: "POST",
-      body: JSON.stringify({ review: comment, mural_id: 1 }),
+      body: JSON.stringify({ review: comment, mural_id: id }),
       headers: { "Content-Type": "application/json" },
     });
 
