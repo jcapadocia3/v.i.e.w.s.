@@ -1,59 +1,103 @@
-/* header,
+/* header,\
 .mural:not(:last-child) {
   border-bottom: 1px solid #ccc;
 } */
 
-body {
-  background-image: url(./assets/images/black-and-white-chicago-skyline.jpg);
-}
+/* body {
+  background-color: #5215fc;
+} */
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+* {
+  font-family: "Mohave", sans-serif;
 }
 
 h1 {
   font-size: 60px;
   text-align: center;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
 
+body {
+  background-color: #d7e5f0;
+}
+
+html {
+  background-color: #d7e5f0;
+}
+
+#logout {
+  margin: 20px 0 20px 0;
+}
+
+#tablebody {
+  text-align: center;
+}
+
+.table-section2 {
+  display: flex;
+  justify-content: center;
+}
+
 .pun {
   font-size: 20px;
   text-align: center;
-  color: black;
+  color: lightslategray;
+}
+.btn {
+  background-color: lightslategray;
+  border-color: #d7e5f0;
+  color: #d7e5f0;
+}
+.btn:hover {
+  background-color: #d7e5f0;
+  color: lightslategrey;
 }
 
-.loginwallpaper {
-  background-image: url("../../assets/images/chicago_sadie.jpg");
-  background-repeat: none;
-  background-size: 100%;
+.commentSubmit:hover {
+  color: white;
 }
-.searchwallpaper {
-  background-image: url("../../assets/images/Screen\ Shot\ 2021-10-31\ at\ 12.43.47\ PM.png");
-  background-repeat: none;
-  background-size: 100%;
+.search-button-color:hover {
+  color: lightslategrey;
+  border-color: black;
+  background: white;
 }
 
+.login-main-color {
+  color: lightslategrey;
+  background-color: #d7e5f0;
+  border-color: black;
+}
+
+.login-main-color:hover {
+  color: lightslategrey;
+  border-color: black;
+  background: white;
+}
+
+.loginLinks {
+  color: lightslategrey;
+}
+
+.color-text-links {
+  color: #d7e5f0;
+}
+
+.color-text-links:hover {
+  text-decoration: none;
+  color: lightslategrey;
+}
+
+.boldFont {
+  font-weight: bold;
+}
+
+.signup-submit:hover {
+  background-color: lightslategrey;
+  color: white;
+}
 .loginFormDiv {
   text-align: center;
   width: 30%;
@@ -72,9 +116,30 @@ h1 {
   background-color: white;
 }
 
+.muralStuff {
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+}
+
+.reviews {
+  background-color: white;
+  text-align: center;
+}
+
+.muralImgs {
+  background-color: white;
+}
+
+.testing {
+  display: flex;
+  width: 100%;
+  /* border: 2px solid black; */
+}
+
 .search-form {
   margin: auto;
   width: 50%;
+  /* border: 2px solid black; */
 }
 
 .form-control {
@@ -122,6 +187,19 @@ h1 {
   border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid black;
+  padding: 20px 0 0 0;
+  text-align: left;
+  background-color: white;
+}
+
+.searchMuralInfo {
+  width: 60%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 20px 0 20px 0;
+  text-align: left;
+  background-color: white;
 }
 
 .reviews {
@@ -131,6 +209,7 @@ h1 {
 }
 
 .muralImgsTitle {
+  padding: 20px 0 20px 0;
   text-align: center;
   font-size: 25px;
 }
@@ -138,9 +217,11 @@ h1 {
 .muralInfoTitle {
   text-align: center;
   font-size: 25px;
+  padding-bottom: 20px;
 }
 
 .reviewsTitle {
+  padding: 20px 0 20px 0;
   text-align: center;
   font-size: 25px;
 }
@@ -151,15 +232,42 @@ h1 {
   /* border: 2px solid black; */
 }
 
+.rateMe1 {
+  padding-top: 20px;
+}
+
 .reviewForm {
   text-align: center;
 }
 
 .commentSubmit {
-  margin: 10px 0 0 0;
+  margin: 10px 0 10px 0;
+}
+
+.bunchaSearchBtns {
+  margin-top: 20px;
+}
+
+.imgUpload {
+  display: flex;
+  justify-content: center;
+}
+
+.file-field {
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 992px) {
+  .imgUploadCont {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+  }
+
+  .imgUpload {
+    display: block;
+  }
+
   .loginFormDiv {
     width: 90%;
   }
@@ -168,19 +276,34 @@ h1 {
     width: 90%;
   }
 
+  .muralSearch2 {
+    width: 90%;
+  }
+
   .search-form {
     width: 85%;
   }
+
   .main-body {
     display: flex;
   }
+
   .main-body {
     display: block;
   }
+
   .left-body {
     width: 100%;
   }
-  .trailInfo {
-    margin-bottom: 10px;
+
+  .right-body {
+    width: 100%;
+  }
+
+  .searchMuralInfo {
+    width: 90%;
+  }
+  .search-button-colors {
+    width: 90%;
   }
 }

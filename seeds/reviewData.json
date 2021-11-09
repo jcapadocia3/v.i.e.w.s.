@@ -1,20 +1,17 @@
 [
     {
-      "name": "Sadie",
       "review": "This place was great!",
       "rating": 5,
       "mural_id": 1,
       "user_id": 2
     },
     {
-      "name": "test2",
       "review": "Beautiful mural!",
       "rating": 5,
       "mural_id": 2,
       "user_id": 3
     },
     {
-      "name": "test3",
       "review": "Looks amazing!",
       "rating": 5,
       "mural_id": 3,

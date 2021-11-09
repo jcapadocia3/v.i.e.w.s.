@@ -1,7 +1,9 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Review extends Model {}
+
+// define fields on Review table:
 
 Review.init(
   {
@@ -12,43 +14,49 @@ Review.init(
       autoIncrement: true,
     },
 
-    name: {
+    review: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
-    review: {
-      type: DataTypes.STRING,
-    },
-
-    rating: {
-      type: DataTypes.INTEGER,
-    },
-
+    // foreign key from mural.js
     mural_id: {
       type: DataTypes.INTEGER,
+      // mural.id
       references: {
-        model: 'mural',
-        key: 'id',
+        model: "mural",
+        key: "id",
       },
     },
 
+    // foreign key from user.js
     user_id: {
       type: DataTypes.INTEGER,
+      // user.id
       references: {
-        model: 'user',
-        key: 'id',
-       },
-      }
-
+        model: "user",
+        key: "id",
+      },
     },
 
+    // foreign key from user.js
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   // user.name
+    //   references: {
+    //     model: 'user',
+    //     key: 'name',
+    //   },
+    //   }
+  },
+
   {
+    // linking to database connection
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'review',
+    modelName: "review",
   }
 );
 

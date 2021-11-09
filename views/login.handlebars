@@ -1,49 +1,31 @@
-<div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>Chicago Murals</h1>
-      <p class="pun">"Bits and mastpieces..."</p>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{!-- {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}} --}}
-      </nav>
-    </header>
-    <main>
-      <div class="loginFormDiv container">
-         <form class="login-form">
-            <div class="mb-3">
-              <label for="email-login" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-              <label for="password-login" class="form-label">Password:</label>
-              <input type="password" class="form-control" id="password-login">
-            </div>
-            <!-- Login button/event listener will direct user to /homepage -->
-            <button type="submit" class="btn btn-primary">Login</button>
-         </form>
-         <div class="register">
-            <!-- href "url" is a placeholder -->
-            <!-- Link will direct user to /signup -->
-            <p>Not registered? <a href="/signup">Register now!</a></p>
-            <!-- href "url" is a placeholder -->
-            <!-- Link will direct user to /homepage-guest -->
-            <a href="/home">Continue as guest</a>
-         </div>
+<div class="background flex-column justify-space-around">
+  <header class="display-flex justify-space-between align-center p-2">
+    <h1>v.i.e.w.s.</h1>
+    <p class="pun">"bits and masterpieces..."</p>
+  </header>
+  <main>
+    <div class="loginFormDiv container">
+      <form class="login-form">
+        <div class="mb-3">
+          <label for="email-login" class="form-label color-text">email:</label>
+          <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="password-login" class="form-label color-text">password:</label>
+          <input type="password" class="form-control" id="password-login">
+        </div>
+        <button type="submit" class="btn btn-primary login-main-color">login</button>
+      </form>
+      <div class="register">
+        <p class="color-text">not registered?<a href="/signup" class="loginLinks boldFont"><span class="boldFont">
+              register now!</span></a></p>
+        <a href="/guest" class="loginLinks boldFont">continue as guest</a>
       </div>
-    </main>
-    <footer>
-    </footer>
-  </div>
-
-  <!-- Render script for logged in users only -->
-  {{!-- {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}} --}}
+    </div>
+  </main>
+  <footer>
+  </footer>
+</div>
 
 
-  <script src="/js/login.js"></script>
+<script src="/js/login.js"></script>
