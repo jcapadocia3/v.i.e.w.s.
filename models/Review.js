@@ -48,11 +48,11 @@ Review.init(
     //     key: 'name',
     //   },
     //   }
-      
 
     },
 
   {
+    // linking to database connection
     sequelize,
     timestamps: false,
     freezeTableName: true,
