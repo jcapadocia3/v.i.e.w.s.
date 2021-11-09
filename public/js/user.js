@@ -96,7 +96,7 @@ $("#mural-title-button").on("click", function (e) {
     },
   })
   .done(function (data) {
-    alert("Retrieved " + data.length + " records from the dataset!");
+    // alert("Retrieved " + data.length + " records from the dataset!");
     console.log(data);
     if (data.length === 0) {
     //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";

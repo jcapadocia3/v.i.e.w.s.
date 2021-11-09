@@ -118,6 +118,7 @@ html{
 
 .muralStuff{
   font-weight: bold;
+  padding: 0 10px 0 10px;
 }
 
 .reviews{
@@ -257,8 +258,13 @@ html{
 }
 
 @media screen and (max-width: 992px) {
+  .imgUploadCont {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+  }
+
   .imgUpload {
-    width: auto;
     display: block;
   }
 
