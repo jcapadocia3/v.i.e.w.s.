@@ -36,23 +36,29 @@ SO I CAN find what the mural looks like, how to get there, the artist’s info, 
 GIVEN a functional Express.js API
 
 WHEN I select "Continue as guest" from the login screen
-THEN I am able to search by zip code to locate nearby murals and am provided with basic information about them (this is the extent of the functionality of the app with not registered)
+THEN I am able to search by zip code to locate nearby murals and am provided with basic information about them (this is the extent of the functionality of the app when a user is not registered)
 
-WHEN I select "Register now" from the login screen OR if I login with existing credentials for the app
+WHEN I select "Register now" from the login screen
 THEN I am able to enter my personal information to register an account for the app and and am directed to my personal profile page to access additional functionality/privileges for the app
 
 WHEN I login with my existing credentials for my registered account from the login screen
 THEN I am directed to my personal profile page to access additional functionality/privileges for the app
 
 WHEN I am logged in and on my personal profile page
-THEN I am presented with information regarding reviews that I have left on specific murals and any pictures I have uploaded as well. I am also presented with the option to search for murals by zip code to find nearby murals or they can search by .
+THEN I am presented with information regarding reviews that I have left on specific murals and any pictures I have uploaded as well. I am also presented with the option to search for murals by zip code, or I can search by specific mural names.
 
-WHEN I 
-THEN I 
+WHEN I select a specific mural (only available to registered users)
+THEN I am directed to the page of the specific mural in which I can view any uploaded images by users, reviews for the mural that have been posted by users, and general information about the mural itself.
+
+WHEN I select "Home" at the top right of the app (only available to registered users)
+THEN I am directed back to my personal profile page
+
+WHEN I select "Logout" at the top right of the app (only available to registered users)
+THEN I am directed back to the login page in which thhe app will have limited functionality until I login again
 ```
 
 ## Installation
-- 
+- As this is a full deployed app on Heroku, no installation is required to begin using the app. Simply visit <a href="https://peaked-project.herokuapp.com/">this link</a> and enjoy!
 
 
 ## Usage
@@ -62,10 +68,15 @@ THEN I
 ## Technologies
 
 ### The technologies used to create this program were: 
-- 
-- 
-- 
-- 
+- bcrypt
+- bulma
+- cloudinary
+- dotenv
+- express
+- express-handlebars
+- multer
+- mysql2
+
 <br><br>
 
 ## Screenshots
