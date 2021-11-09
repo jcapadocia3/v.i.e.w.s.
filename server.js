@@ -39,47 +39,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 
-
- 
-
-
-// image upload - npm cloudinary
-const cloudinaryAPI = 'https://api.cloudinary.com/v1_1/dqjpkb3xf/mh/upload';
-const cloudinaryUploadPreset = 'wk3fcptv/mh/upload';
-// const imgPreview = document.getElementById('')
-
-const url = cloudinaryAPI;
-const options = {
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json;charset=UTF-8'
-  },
-  body: JSON.stringify({
-    a: 10,
-    b: 20
-  })
-};
-
-fetch(url, options)
-  .then(response => {
-    console.log(response.status);
-  });
-
-// cloudinary.uploader.upload_stream(
-//   { agent: myAgent },
-//   function(error, result) { console.log(result); }
-// );
-
-
-
-
-
-
-
-
-
-
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening!!!'));
 });
