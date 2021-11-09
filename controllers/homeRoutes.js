@@ -127,7 +127,12 @@ router.post('/review', async (req, res) => {
   }
 });
 
-module.exports = router;
+router.get('/guest', async (req, res) => {
+  try {
+      res.render('guesthomepage')
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
 
-// heroku test
-// changy change
+module.exports = router;

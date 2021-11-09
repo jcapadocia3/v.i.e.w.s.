@@ -2,15 +2,6 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>chicago murals</h1>
       <p class="pun">"bits and masterpieces..."</p>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{!-- {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}} --}}
-      </nav>
     </header>
     <main>
       <div class="loginFormDiv container">
@@ -27,23 +18,14 @@
             <button type="submit" class="btn btn-primary login-main-color">login</button>
          </form>
          <div class="register">
-            <!-- href "url" is a placeholder -->
-            <!-- Link will direct user to /signup -->
             <p class="color-text">not registered?<a href="/signup" class="color-text-links"><span class="boldFont"> register now!</span></a></p>
-            <!-- href "url" is a placeholder -->
-            <!-- Link will direct user to /homepage-guest -->
-            <a href="/home" class="color-text-links">continue as guest</a>
+            <a href="/guest" class="color-text-links">continue as guest</a>
          </div>
       </div>
     </main>
     <footer>
     </footer>
   </div>
-
-  <!-- Render script for logged in users only -->
-  {{!-- {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}} --}}
 
 
   <script src="/js/login.js"></script>
