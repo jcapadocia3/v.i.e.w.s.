@@ -1,3 +1,4 @@
+// model communication
 const User = require('./User');
 const Mural = require('./Mural');
 const Review = require('./Review');

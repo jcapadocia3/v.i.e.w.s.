@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Mural extends Model {}
 
+// define fields on Mural table:
+
 Mural.init(
   {
     id: {
@@ -29,19 +31,18 @@ Mural.init(
       allowNull: false,
     },
 
-    // need to also add: street addy + art description if in the API(?)+ image holder
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    // },
+
     zip: {
       type: DataTypes.INTEGER,
     },
-    // full address vs zip...?
+
     address: {
       type: DataTypes.STRING,
     },
