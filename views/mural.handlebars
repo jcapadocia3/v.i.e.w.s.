@@ -13,13 +13,20 @@
 <main>
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
-    <div class="bs-example">
-      <button type="button" id="mural-search-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Zip Code <i class="fas fa-search"></i>
-      </button>
-      <button type="button" id="mural-title-button" class="btn btn-primary">
-        Title <i class="fas fa-search"></i>
-      </button>
+    
+
+
+      <div class="container">
+    <div class="row">
+      <div class="bunchaSearchBtns col text-center">
+        <button type="button" id="mural-search-button" class="btn btn-primary search-button-color" data-toggle="modal" data-target="#myModal">Zip Code</button>
+        <button type="button" id="mural-title-button" class="btn btn-primary search-button-color">Title</button>
+        <button type="button" id="luckybutton" class="btn btn-primary align-center search-button-color">Find one for me!</button>
+      </div>
+    </div>
+  </div>
+
+  
       <!-- Modal HTML -->
       <div id="myModal" class="modal fade" tabindex="-1">
         <div class="modal-dialog">
@@ -36,22 +43,6 @@
               <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
           </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class=" col text-center">
-          <button id="luckybutton" class="btn btn-primary align-center" type="button">
-            Find a mural for me!
-          </button>
-          {{!-- <button id="zipcodebutton" class="btn btn-primary align-center" type="button">
-            Zipcode
-          </button>
-          <button id="artistbutton" class="btn btn-primary align-center" type="button">
-            Artist
-          </button> --}}
         </div>
       </div>
     </div>

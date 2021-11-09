@@ -67,9 +67,9 @@ $("#mural-search-button").on("click", function (e) {
     // alert("Retrieved " + data.length + " records from the dataset!");
     // console.log(data);
     if (data.length === 0) {
-    //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
-    //   $("#tablebody").empty();
-    //   $("#tablebody").append(noMuralOut);
+      let noMuralOut = "Zip Code" + callData + "does not contain any murals";
+      $("#tablebody").empty();
+      $("#tablebody").append(noMuralOut);
     $(document).ready(function(){
       $("#myModal").on("show.bs.modal", function(event){
         // Place the returned HTML into the selected element
