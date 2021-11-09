@@ -19,19 +19,27 @@ h1 {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
 body{
   background-color: #D7E5F0;
 }
+
 html{
   background-color: #D7E5F0;
 }
+
 #logout {
   margin: 20px 0 20px 0;
 }
 
-/* #luckybutton {
-  margin-top: 20px;
-} */
+#tablebody {
+  text-align: center;
+}
+
+.table-section2 {
+  display: flex;
+  justify-content: center;
+}
 
 .no-button {
   background: none;
@@ -188,7 +196,7 @@ html{
   border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid black;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 0 0;
   text-align: left;
   background-color: white;
 }
@@ -218,6 +226,7 @@ html{
 .muralInfoTitle {
   text-align: center;
   font-size: 25px;
+  padding-bottom: 20px;
 }
 
 .reviewsTitle {
@@ -230,6 +239,10 @@ html{
   text-align: center;
   padding: 10px 0 10px 0;
   /* border: 2px solid black; */
+}
+
+.rateMe1 {
+  padding-top: 20px;
 }
 
 .reviewForm {
