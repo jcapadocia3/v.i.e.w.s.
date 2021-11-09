@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row ">
       <div class="col-md-12 text-right nav-bar">
-        <button type="button" id="home"
-          class="btn btn-primary home-button align-right search-button-color">home</button>
+        <button type="button" id="home" class="btn btn-primary home-button align-right search-button-color"><a
+            href="/home/users/:id" class="color-text-links">home</a></button>
         <button type="button" id="logout" class="btn btn-primary align-right search-button-color">logout</button>
       </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Mural Results</h5>
+          <h5 class="modal-title">mural results</h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -59,9 +59,9 @@
               {{!-- <span>choose file</span> --}}
               <input name="myImage" type="file" placeholder="test">
             </div>
-          </div>
-          <button type="submit" class="btn search-button-color">upload image</button>
-        </form>
+            <button type="submit" class="btn search-button-color">upload image</button>
+          </form>
+        </div>
         <br>
       </div>
       <div class="muralInfo container">
@@ -109,47 +109,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="/js/mural.js"></script>
 <script src="/js/logout.js"></script>
-
-{{!--
-<!-- Loop over each object in the murals array -->
-{{#each murals as |mural| }}
-<div class="row mb-4 mural">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/mural/{{mural.id}}">{{mural.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount mural.year_installed}}</span>
-      needed!
-    </p>
-    <p>Created by {{mural.user.name}} on {{format_date mural.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{mural.description}}
-    </p>
-  </div>
-</div>
-{{/each}} --}}
-
-{{!-- <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount year_installed}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div> --}}
-
-
-{{!-- issues --}}
