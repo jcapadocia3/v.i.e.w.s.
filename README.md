@@ -20,7 +20,7 @@ ___
 
 ## Description <br>
 
-The purpose of this app is to allow art enthusiasts to interact with their community and rally around local artists who are commissioned to paint murals around Chicago. At it's most basic functionality, the app will allow users to search by zip code to locate nearby murals around them, providing them with information about the mural and an address to visit it if they wish. If a user has a registered account with the app, they will have added capabilities to leave reviews about specific murals and upload images to be referenced by other registered users as well.
+The purpose of this app is to allow art enthusiasts to interact with their community and rally around local artists who are commissioned to paint murals around the city of Chicago. At it's most basic functionality, the app will allow users to search by zip code to locate nearby murals around them, providing them with information about the mural and an address to visit it if they wish. If a user has a registered account with the app, they will have added capabilities to leave reviews about specific murals and upload images to be referenced by other registered users as well.
 
 
 ### User Story:
@@ -33,7 +33,7 @@ SO I CAN find what the mural looks like, how to get there, the artist’s info, 
 ```
 
 ```
-GIVEN a functional Express.js API
+GIVEN the app is functional and properly deployed for public use
 
 WHEN I select "Continue as guest" from the login screen
 THEN I am able to search by zip code to locate nearby murals and am provided with basic information about them (this is the extent of the functionality of the app when a user is not registered)
