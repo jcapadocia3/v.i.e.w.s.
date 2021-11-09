@@ -77,8 +77,12 @@ html{
   background: white;
 }
 
+.loginLinks {
+  color: lightslategrey;
+}
+
 .color-text-links{
-  color: white;
+  color: #D7E5F0;
 } 
 
 .color-text-links:hover{
