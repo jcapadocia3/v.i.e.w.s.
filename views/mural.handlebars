@@ -70,10 +70,6 @@
         {{!-- I PUT THIS TABLE HERE HEHEHEH --}}
         <table class="table-section2">
           <tbody id="tablebody">
-            <tr>
-              <td>
-              </td>
-            </tr>
           </tbody>
         </table>
         <br>
@@ -90,21 +86,17 @@
             <h5>
               {{review.review}}
             </h5>
-            <p>Review by {{review.name}}</p>
+            <p>review by: {{review.name}}</p>
           </div>
         </div>
         {{/each}}
 
         <form class="rateMe1 text-center">
-          <label for="exampleFormControlTextarea1" class="form-label">review comments</label>
+          <label for="exampleFormControlTextarea1" class="form-label">leave a review below</label>
           <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <div class="container">
-            <div class="row">
-              <div class=" text center">
-                <button type="sumbit" id="commentSubmit"
-                  class="commentSubmit btn btn-primary text-center search-button-color">Submit</button>
-              </div>
-            </div>
+          <div class="submitCenter text center">
+            <button type="sumbit" id="commentSubmit"
+              class="commentSubmit btn btn-primary text-center search-button-color">submit</button>
           </div>
         </form>
       </div>
