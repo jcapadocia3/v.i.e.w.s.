@@ -1,3 +1,19 @@
+// // image upload - npm cloudinary
+// var cloudinary = require('cloudinary').v2
+// var cloudinaryAPI = 'https://api.cloudinary.com/v1_1/dqjpkb3xf';
+// var cloudinaryUploadPreset = 'wk3fcptv';
+// var imgPreview = document.getElementById('')
+
+// //
+// fileUpload.querySelector(".commentSubmit").addEventListener("click", commentHandler);
+
+
+// cloudinary.uploader.upload_stream(
+//   { agent: myAgent },
+//   function(error, result) { console.log(result); }
+// );
+
+
 const commentHandler = async (event) => {
   console.log("raddddddd!");
   // debugger;
