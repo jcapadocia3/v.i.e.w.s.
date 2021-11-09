@@ -26,6 +26,13 @@
 // //   function(error, result) { console.log(result); }
 // // );
 
+function parseUrl () {
+  const url = location.href;
+  const params = url.split('/');
+  console.log('parse +++', params);
+  return params == null ? 1 : params[params.length - 1];
+}
+
 
 
 const commentHandler = async (event) => {
@@ -38,7 +45,7 @@ const commentHandler = async (event) => {
   // const idArray = [];
 
   if (comment) {
-    const id = asd();
+    const id = parseUrl();
     // Send a POST request to the API endpoint
     const response = await fetch("/review", {
       method: "POST",
