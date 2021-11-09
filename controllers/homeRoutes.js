@@ -41,7 +41,7 @@ router.get('/home/users/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/mural/:id', async (req, res) => {
+router.get('/mural/:id', withAuth, async (req, res) => {
   try {
     // Get all murals and JOIN with user data
     const reviewData = await Review.findAll({

@@ -244,7 +244,21 @@ html{
   margin-top: 20px;
 }
 
+.imgUpload {
+  display: flex;
+  justify-content: center;
+}
+
+.file-field {
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 992px) {
+  .imgUpload {
+    width: auto;
+    display: block;
+  }
+
   .loginFormDiv {
     width: 90%;
   }
