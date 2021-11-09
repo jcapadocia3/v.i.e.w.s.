@@ -51,7 +51,11 @@ router.get('/mural/:id', withAuth, async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const reviews = reviewData.map((review) => review.get({ plain: true }))
+    // create a new array for the elements to pass thru (review left on mural/:id)
+      .filter((review) => review.mural_id == req.params.id);
+
+    console.log('mural id +++', reviews);
 
     // Pass serialized data and session flag into template
     res.render('mural', { 
