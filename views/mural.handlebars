@@ -53,13 +53,11 @@
         <h2 class="muralImgsTitle">mural images</h2>
 
         <span %=typeof msg !='undefined' ? msg : '' %></span>
-        <div class="imgUploadCont">
-          <form class="imgUpload" action="/mural/:id" method="POST" enctype="multipart/form-data">
-            <div class="file-field input-field">
-              <div class="btn search-button-color">
-                {{!-- <span>choose file</span> --}}
-                <input name="myImage" type="file" placeholder="test">
-              </div>
+        <form class="imgUpload" action="/mural/:id" method="POST" enctype="multipart/form-data">
+          <div class="file-field input-field">
+            <div class="btn search-button-colors">
+              {{!-- <span>choose file</span> --}}
+              <input name="myImage" type="file" placeholder="test">
             </div>
             <button type="submit" class="btn search-button-color">upload image</button>
           </form>
