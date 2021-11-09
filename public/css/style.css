@@ -1,4 +1,4 @@
-/* header,
+/* header,\
 .mural:not(:last-child) {
   border-bottom: 1px solid #ccc;
 } */
@@ -26,12 +26,12 @@ html{
   background-color: #D7E5F0;
 }
 #logout {
-  margin: 20px 20px 20px 0;
+  margin: 20px 0 20px 0;
 }
 
-#luckybutton {
+/* #luckybutton {
   margin-top: 20px;
-}
+} */
 
 .no-button {
   background: none;
@@ -193,6 +193,16 @@ html{
   background-color: white;
 }
 
+.searchMuralInfo {
+  width: 60%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 20px 0 20px 0;
+  text-align: left;
+  background-color: white;
+}
+
 .reviews {
   border-radius: 5px;
   border: 2px solid black;
@@ -230,9 +240,8 @@ html{
   margin: 10px 0 10px 0;
 }
 
-.rating__star {
-  color: gold;
-  font-size: 30px;
+.bunchaSearchBtns {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 992px) {
@@ -251,16 +260,24 @@ html{
   .search-form {
     width: 85%;
   }
+
   .main-body {
     display: flex;
   }
+
   .main-body {
     display: block;
   }
+
   .left-body {
     width: 100%;
   }
-  .trailInfo {
-    margin-bottom: 10px;
+
+  .right-body {
+    width: 100%;
+  }
+
+  .searchMuralInfo {
+    width: 90%;
   }
 }
