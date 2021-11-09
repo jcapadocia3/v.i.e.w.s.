@@ -2,74 +2,70 @@
   <div class="container">
     <div class="row ">
       <div class="col-md-12 text-right nav-bar">
-        <button type="button" id="home" class="btn btn-primary home-button align-right">home</button>
-        <button type="button" id="logout" class="btn btn-primary align-right">logout</button>
+        <button type="button" id="home"
+          class="btn btn-primary home-button align-right search-button-color">home</button>
+        <button type="button" id="logout" class="btn btn-primary align-right search-button-color">logout</button>
       </div>
     </div>
-    <h1>MURALS</h1>
-    <p class="pun">"Not for the paint of heart..."</p>
-    <h1 class="text-center">welcome</h1>
+    <h1>murals</h1>
+    <p class="pun">"not for the paint of heart..."</p>
+    {{!-- <h1 class="text-center">welcome</h1> --}}
+  </div>
 </header>
 <main>
   <div class="input-group search-form">
     <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
-    
-
-
-      <div class="container">
+  </div>
+  <div class="container">
     <div class="row">
       <div class="bunchaSearchBtns col text-center">
-        <button type="button" id="mural-search-button" class="btn btn-primary search-button-color" data-toggle="modal" data-target="#myModal">Zip Code</button>
-        <button type="button" id="mural-title-button" class="btn btn-primary search-button-color">Title</button>
-        <button type="button" id="luckybutton" class="btn btn-primary align-center search-button-color">Find one for me!</button>
+        <button type="button" id="mural-search-button" class="btn btn-primary search-button-color" data-toggle="modal"
+          data-target="#myModal">zip code</button>
+        <button type="button" id="mural-title-button" class="btn btn-primary search-button-color">title</button>
+        <button type="button" id="luckybutton" class="btn btn-primary align-center search-button-color">find one for
+          me!</button>
       </div>
     </div>
   </div>
-
-  
-      <!-- Modal HTML -->
-      <div id="myModal" class="modal fade" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Mural Results</h5>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <!-- Content will be loaded here from "remote.php" file -->
-              <p>hey loser</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+  <!-- Modal HTML -->
+  <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mural Results</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!-- Content will be loaded here from "remote.php" file -->
+          <p>hey loser</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
+
+
   <div class="main-body container">
     <div class="left-body container">
       <div class="muralImgs container">
-        <h2 class="muralImgsTitle">Mural Images</h2>
+        <h2 class="muralImgsTitle">mural images</h2>
+
         <span %=typeof msg !='undefined' ? msg : '' %></span>
-        <form action="/mural/:id" method="POST" enctype="multipart/form-data">
+        <form class="imgUpload" action="/mural/:id" method="POST" enctype="multipart/form-data">
           <div class="file-field input-field">
-            <div class="btn ">
-              <span>File</span>
-              <input name="myImage" type="file">
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+            <div class="btn search-button-color">
+              {{!-- <span>choose file</span> --}}
+              <input name="myImage" type="file" placeholder="test">
             </div>
           </div>
-          <button type="submit" class="btn">Submit</button>
+          <button type="submit" class="btn search-button-color">upload image</button>
         </form>
         <br>
-        <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
-        <img src="https://via.placeholder.com/150" alt="text" width="100%" />
       </div>
       <div class="muralInfo container">
-        <h2 class="muralInfoTitle">Mural Information</h2>
+        <h2 class="muralInfoTitle">mural information</h2>
 
         {{!-- I PUT THIS TABLE HERE HEHEHEH --}}
         <table class="table-section2">
@@ -81,58 +77,38 @@
           </tbody>
         </table>
         <br>
-
-
-        {{#each murals as |mural|}}
-        <div>
-          <div>
-            <h2>
-              <a href="/mural/{{mural.id}}">{{mural.name}}</a>
-            </h2>
-            <p>Created by {{mural.artist}}</p>
-          </div>
-          <div>
-            <p>
-              {{mural.description}}
-            </p>
-          </div>
-        </div>
       </div>
-      {{/each}}
-
     </div>
-  </div>
 
-  <div class="right-body container">
-    <div class="reviews container">
-      <h2 class="reviewsTitle">Reviews</h2>
-      {{#each reviews as |review|}}
-      <div>
+    <div class="right-body container">
+      <div class="reviews container">
+        <h2 class="reviewsTitle">reviews</h2>
+
+        {{#each reviews as |review|}}
         <div>
-          <h5>
-            {{review.review}}
-          </h5>
-          <p>Review by {{review.name}}</p>
+          <div>
+            <h5>
+              {{review.review}}
+            </h5>
+            <p>Review by {{review.name}}</p>
+          </div>
         </div>
-      </div>
-      {{/each}}
+        {{/each}}
 
-      <form class="rateMe1 text-center">
-        {{!-- <button id="rating1" class="rating1 btn btn-primary" type="submit">1</button>
-        <button type="submit" id="commentSubmit" class="commentSubmit btn btn-primary">Submit</button> --}}
-        <label for="exampleFormControlTextarea1" class="form-label">Review Comments</label>
-        <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <div class="container">
-          <div class="row">
-            <div class=" text center">
-              <button type="sumbit" id="commentSubmit" class="commentSubmit btn btn-primary text-center">Submit</button>
+        <form class="rateMe1 text-center">
+          <label for="exampleFormControlTextarea1" class="form-label">review comments</label>
+          <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div class="container">
+            <div class="row">
+              <div class=" text center">
+                <button type="sumbit" id="commentSubmit"
+                  class="commentSubmit btn btn-primary text-center search-button-color">Submit</button>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
-  </div>
   </div>
 </main>
 
