@@ -53,7 +53,7 @@ $("#mural-search-button").on("click", function (e) {
   $("#tablebody").empty();
 
   let callData = $("#search-input").val();
-
+  // url set to 'zip'
   $.ajax({
     url: `https://data.cityofchicago.org/resource/we8h-apcf.json?zip=${callData}`,
 
@@ -106,9 +106,10 @@ $("#mural-search-button").on("click", function (e) {
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // handler for mural title:
-document.querySelector(".").addEventListener("click", commentHandler);
+// document.querySelector(".").addEventListener("click", commentHandler);
 
 // mural search by title:
 $("#mural-title-button").on("click", function (e) {
@@ -116,9 +117,9 @@ $("#mural-title-button").on("click", function (e) {
   $("#tablebody").empty();
 
   let callData = $("#search-input").val();
-
+  // url set to 'artwork_title'
   $.ajax({
-    url: `https://data.cityofchicago.org/resource/we8h-apcf.json?zip=${callData}`,
+    url: `https://data.cityofchicago.org/resource/we8h-apcf.json?artwork_title=${callData}`,
 
     type: "GET",
     data: {
@@ -127,17 +128,17 @@ $("#mural-title-button").on("click", function (e) {
     },
   })
   .done(function (data) {
-    // alert("Retrieved " + data.length + " records from the dataset!");
-    // console.log(data);
+    alert("Retrieved " + data.length + " records from the dataset!");
+    console.log(data);
     if (data.length === 0) {
     //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
     //   $("#tablebody").empty();
     //   $("#tablebody").append(noMuralOut);
     $(document).ready(function(){
-      $("#myModal").on("show.bs.modal", function(event){
-        // Place the returned HTML into the selected element
-        $(this).find(".modal-body");
-      });
+      // $("#myModal").on("show.bs.modal", function(event){
+      //   // Place the returned HTML into the selected element
+      //   $(this).find(".modal-body");
+      // });
     });
   }
     // FOR any results, display as such:
@@ -145,7 +146,7 @@ $("#mural-title-button").on("click", function (e) {
       //   console.log(data[i]);
       muralArray.push(data[i]);
 
-      let makeMuralOutput =
+      let makeTitleOutput =
         `<span class="muralStuff">Mural Title: </span>` +
         data[i].artwork_title +
         "<br>" +
@@ -161,9 +162,9 @@ $("#mural-title-button").on("click", function (e) {
         data[i].zip +
         "<br><br>";
 
-      let html = `<tr><td> ${makeMuralOutput} </td></tr>`;
+      let html = `<tr><td> ${makeTitleOutput} </td></tr>`;
       $("#tablebody").append(html);
     }
   });
-  // console.log(muralArray)
+  console.log(muralArray)
 });
