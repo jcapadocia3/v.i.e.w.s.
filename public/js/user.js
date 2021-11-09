@@ -34,10 +34,27 @@
     .done(function (data) {
       // alert("Retrieved " + data.length + " records from the dataset!");
       // console.log(data);
-      if (data.length === 0) {
-      //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
-      //   $("#tablebody").empty();
-      //   $("#tablebody").append(noMuralOut);
+      `<div id="myModal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mural Results</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <!-- Content will be loaded here from "remote.php" file -->
+            <p> we found {{data.length}} records from the dataset</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>`
+    if (data.length === 0) {
+      let noMuralOut = "zip code " + callData + " does not contain any murals :(";
+      $("#tablebody1").empty();
+      $("#tablebody1").append(noMuralOut);
       $(document).ready(function(){
         $("#myModal").on("show.bs.modal", function(event){
           // Place the returned HTML into the selected element

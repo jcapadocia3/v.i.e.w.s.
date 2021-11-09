@@ -114,7 +114,7 @@ $("#mural-search-button").on("click", function (e) {
     </div>
   </div>`
   if (data.length === 0) {
-    let noMuralOut = "Zip Code " + callData + " does not contain any murals";
+    let noMuralOut = "zip code " + callData + " does not contain any murals :(";
     $("#tablebody").empty();
     $("#tablebody").append(noMuralOut);
     $(document).ready(function(){
@@ -175,7 +175,7 @@ $("#mural-title-button").on("click", function (e) {
     },
   })
   .done(function (data) {
-    alert("Retrieved " + data.length + " records from the dataset!");
+    // alert("Retrieved " + data.length + " records from the dataset!");
     console.log(data);
     if (data.length === 0) {
     //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
