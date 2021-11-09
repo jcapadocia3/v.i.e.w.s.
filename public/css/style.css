@@ -8,7 +8,7 @@
 } */
 
 * {
-  font-family: 'Mohave', sans-serif;
+  font-family: "Mohave", sans-serif;
 }
 
 h1 {
@@ -20,12 +20,12 @@ h1 {
     1px 1px 0 #000;
 }
 
-body{
-  background-color: #D7E5F0;
+body {
+  background-color: #d7e5f0;
 }
 
-html{
-  background-color: #D7E5F0;
+html {
+  background-color: #d7e5f0;
 }
 
 #logout {
@@ -46,20 +46,20 @@ html{
   text-align: center;
   color: lightslategray;
 }
-.btn{
-  background-color: lightslategray ;
-  border-color: #D7E5F0;
-  color: #D7E5F0;
+.btn {
+  background-color: lightslategray;
+  border-color: #d7e5f0;
+  color: #d7e5f0;
 }
-.btn:hover{
-  background-color: #D7E5F0;
-  color: lightslategrey
+.btn:hover {
+  background-color: #d7e5f0;
+  color: lightslategrey;
 }
 
-.commentSubmit:hover{
-  color: white
+.commentSubmit:hover {
+  color: white;
 }
-.search-button-color:hover{
+.search-button-color:hover {
   color: lightslategrey;
   border-color: black;
   background: white;
@@ -67,11 +67,11 @@ html{
 
 .login-main-color {
   color: lightslategrey;
-  background-color: #D7E5F0;
+  background-color: #d7e5f0;
   border-color: black;
 }
 
-.login-main-color:hover{ 
+.login-main-color:hover {
   color: lightslategrey;
   border-color: black;
   background: white;
@@ -81,20 +81,20 @@ html{
   color: lightslategrey;
 }
 
-.color-text-links{
-  color: #D7E5F0;
-} 
+.color-text-links {
+  color: #d7e5f0;
+}
 
-.color-text-links:hover{
-  text-decoration:none;
+.color-text-links:hover {
+  text-decoration: none;
   color: lightslategrey;
 }
 
 .boldFont {
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.signup-submit:hover{
+.signup-submit:hover {
   background-color: lightslategrey;
   color: white;
 }
@@ -116,17 +116,17 @@ html{
   background-color: white;
 }
 
-.muralStuff{
+.muralStuff {
   font-weight: bold;
   padding: 0 10px 0 10px;
 }
 
-.reviews{
-  background-color:white ;
+.reviews {
+  background-color: white;
   text-align: center;
 }
 
-.muralImgs{
+.muralImgs {
   background-color: white;
 }
 
@@ -303,7 +303,7 @@ html{
   .searchMuralInfo {
     width: 90%;
   }
-  .search-button-colors{
+  .search-button-colors {
     width: 90%;
   }
 }

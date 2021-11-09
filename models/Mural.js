@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Mural extends Model {}
 
@@ -13,7 +13,7 @@ Mural.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    
+
     // artwork title
     name: {
       type: DataTypes.STRING,
@@ -46,14 +46,13 @@ Mural.init(
     address: {
       type: DataTypes.STRING,
     },
-
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'mural',
+    modelName: "mural",
   }
 );
 

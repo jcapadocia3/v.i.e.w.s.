@@ -9,7 +9,6 @@
     </div>
     <h1>murals</h1>
     <p class="pun">"not for the paint of heart..."</p>
-    {{!-- <h1 class="text-center">welcome</h1> --}}
   </div>
 </header>
 <main>
@@ -60,47 +59,47 @@
               <input name="myImage" type="file" placeholder="test">
             </div>
             <button type="submit" class="btn search-button-color">upload image</button>
-          </form>
-        </div>
-        <br>
-      </div>
-      <div class="muralInfo container">
-        <h2 class="muralInfoTitle">mural information</h2>
-
-        {{!-- I PUT THIS TABLE HERE HEHEHEH --}}
-        <table class="table-section2">
-          <tbody id="tablebody">
-          </tbody>
-        </table>
-        <br>
-      </div>
-    </div>
-
-    <div class="right-body container">
-      <div class="reviews container">
-        <h2 class="reviewsTitle">reviews</h2>
-
-        {{#each reviews as |review|}}
-        <div>
-          <div>
-            <h5>
-              {{review.review}}
-            </h5>
-            <p>review by: {{review.name}}</p>
-          </div>
-        </div>
-        {{/each}}
-
-        <form class="rateMe1 text-center">
-          <label for="exampleFormControlTextarea1" class="form-label">leave a review below</label>
-          <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <div class="submitCenter text center">
-            <button type="sumbit" id="commentSubmit"
-              class="commentSubmit btn btn-primary text-center search-button-color">submit</button>
-          </div>
         </form>
       </div>
+      <br>
     </div>
+    <div class="muralInfo container">
+      <h2 class="muralInfoTitle">mural information</h2>
+
+      {{!-- I PUT THIS TABLE HERE HEHEHEH --}}
+      <table class="table-section2">
+        <tbody id="tablebody">
+        </tbody>
+      </table>
+      <br>
+    </div>
+  </div>
+
+  <div class="right-body container">
+    <div class="reviews container">
+      <h2 class="reviewsTitle">reviews</h2>
+
+      {{#each reviews as |review|}}
+      <div>
+        <div>
+          <h5>
+            {{review.review}}
+          </h5>
+          <p>review by: {{review.name}}</p>
+        </div>
+      </div>
+      {{/each}}
+
+      <form class="rateMe1 text-center">
+        <label for="exampleFormControlTextarea1" class="form-label">leave a review below</label>
+        <textarea id="commentInput" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="submitCenter text center">
+          <button type="sumbit" id="commentSubmit"
+            class="commentSubmit btn btn-primary text-center search-button-color">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
   </div>
 </main>
 
