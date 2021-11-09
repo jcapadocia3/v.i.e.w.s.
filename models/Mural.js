@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Mural extends Model {}
 
+// define fields on Mural table:
+
 Mural.init(
   {
     id: {
