@@ -15,14 +15,14 @@
     <div class="testing">
       <input id="search-input1" class="form-control" type="text" placeholder="Search by..." aria-label="Search" />
     </div>
-
   </div>
   <div class="container">
     <div class="row">
       <div class="bunchaSearchBtns col text-center">
         <button type="button" id="mural-search-button1" class="btn btn-primary search-button-color">zip code</button>
         <button type="button" id="mural-title-button" class="btn btn-primary search-button-color">title</button>
-        <button type="button" id="luckybutton" class="btn btn-primary align-center search-button-color">find one for me!</button>
+        <button type="button" id="luckybutton" class="luckybutton btn btn-primary align-center search-button-color">find
+          one for me!</button>
       </div>
     </div>
   </div>
@@ -42,7 +42,6 @@
       </div>
     </div>
   </div>
-
   <div class="main-body container">
     <div class="left-body container">
       <div class="muralInfo container">
@@ -51,24 +50,18 @@
     </div>
     <div class="right-body container">
       <div class="reviews container">
-        {{!-- {{#each murals as |mural|}}
-        <div class="row mb-4 mural">
-          <div class="col-md-5 text-center">
-            <h2>
-              <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-              {{{get_emoji}}}
+        <h2 class="reviewsTitle">reviews</h2>
+
+        {{#each murals as |mural|}}
+        <div>
+          <div>
+            <h5>
               <a href="/mural/{{mural.id}}">{{mural.name}}</a>
-            </h2>
-            <p>Created by {{mural.artist}}</p>
-          </div>
-          <div class="col-md-7">
-            <p>
-              {{mural.description}}
-            </p>
+            </h5>
           </div>
         </div>
-        {{/each}} --}}
-        <h2 class="reviewsTitle">reviews</h2>
+        {{/each}}
+
       </div>
     </div>
   </div>
@@ -80,66 +73,4 @@
 <script src="/js/profile.js"></script>
 <script src="/js/logout.js"></script>
 <script src="/js/user.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{!--
-<!-- Loop over each object in the murals array -->
-{{#each murals as |mural| }}
-<div class="row mb-4 mural">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/mural/{{mural.id}}">{{mural.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount mural.year_installed}}</span>
-      needed!
-    </p>
-    <p>Created by {{mural.user.name}} on {{format_date mural.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{mural.description}}
-    </p>
-  </div>
-</div>
-{{/each}} --}}
-
-
-
-
-
-
-
-
-{{!-- <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount year_installed}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div> --}}
+<script src="/js/lucky.js"></script>
