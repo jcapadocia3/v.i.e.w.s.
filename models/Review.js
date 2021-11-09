@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Review extends Model {}
 
@@ -18,14 +18,14 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+
     // foreign key from mural.js
     mural_id: {
       type: DataTypes.INTEGER,
       // mural.id
       references: {
-        model: 'mural',
-        key: 'id',
+        model: "mural",
+        key: "id",
       },
     },
 
@@ -34,10 +34,10 @@ Review.init(
       type: DataTypes.INTEGER,
       // user.id
       references: {
-        model: 'user',
-        key: 'id',
-       },
+        model: "user",
+        key: "id",
       },
+    },
 
     // foreign key from user.js
     // user_name: {
@@ -48,8 +48,7 @@ Review.init(
     //     key: 'name',
     //   },
     //   }
-
-    },
+  },
 
   {
     // linking to database connection
@@ -57,7 +56,7 @@ Review.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'review',
+    modelName: "review",
   }
 );
 
