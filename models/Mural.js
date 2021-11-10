@@ -31,14 +31,6 @@ Mural.init(
       allowNull: false,
     },
 
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
-
     zip: {
       type: DataTypes.INTEGER,
     },
