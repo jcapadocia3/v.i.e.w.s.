@@ -75,9 +75,9 @@ Initial Mobile Display   |  Results Mobile Display
 ![Screenshot](assets/images/mobilemuralpagebefore.png)  |  ![Screenshot](assets/images/mobilemuralpage.png)
 
 
-Initial Desktop Display: ![Screenshot](assets/images/desktoplogin.png)
+Initial Desktop Display: ![Screenshot](assets/images/desktopbefore.png)
 
-Results Desktop Display: ![Screenshot](assets/images/desktopmuralpage.png)
+Results Desktop Display: ![Screenshot](assets/images/desktopafter.png)
 
 <br>
 
