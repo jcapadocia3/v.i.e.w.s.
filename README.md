@@ -1,4 +1,4 @@
-# Project-2
+# v.i.e.w.s.
 
 By: Jamie Capadocia, Jeffery Wojciechowski, & Sadie Sial
 
