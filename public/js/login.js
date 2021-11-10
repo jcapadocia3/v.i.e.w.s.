@@ -13,7 +13,6 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace("/home/users/:id");
-      console.log("User logged in");
     } else {
       alert(response.statusText);
     }
