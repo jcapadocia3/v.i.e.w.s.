@@ -59,7 +59,9 @@ $("#mural-search-button2").on("click", function (e) {
         data[i].street_address +
         " Chicago, IL           " +
         data[i].zip +
-        "<br><br>";
+        "<br><br>" +
+        `<img style="display=center src="$" width="200" height="300">` +
+        "<br><br><br>";
 
       let html = `<tr><td> ${makeMuralOutput} </td></tr>`;
       $("#tablebody2").append(html);
