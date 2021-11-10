@@ -15,12 +15,10 @@ ___
 * [Links](#links)
 * [Contact](#contact)
 * [License](#license)
-<br><br>
 
 ## Description <br>
 
 The purpose of this app is to allow art enthusiasts to interact with their community and rally around local artists who are commissioned to paint murals around the city of Chicago. At it's most basic functionality, the app will allow users to search by zip code to locate nearby murals around them, providing them with information about the mural and an address to visit it if they wish. If a user has a registered account with the app, they will have added capabilities to leave reviews about specific murals and upload images to be referenced by other registered users as well.
-
 
 ### User Story:
 
@@ -70,13 +68,11 @@ THEN I am directed back to the login page in which thhe app will have limited fu
 - Handlebars
 - MySql
 
-<br><br>
-
 ## Screenshots
 
 Initial Mobile Display   |  Results Mobile Display
 :-------------------------:|:-------------------------:
-![Screenshot](assets/images/screenshot.png)  |  ![Screenshot](assets/images/screenshot.png)
+![Screenshot](assets/images/mobilemuralpagebefore.png)  |  ![Screenshot](assets/images/mobilemuralpage.png)
 
 
 Initial Desktop Display: ![Screenshot](assets/images/desktoplogin.png)
@@ -87,11 +83,11 @@ Results Desktop Display: ![Screenshot](assets/images/desktopmuralpage.png)
 
 ## Links
 
-- [Link]()
+- [Heroku](peaked-project.herokuapp.com/)
 
 - [GitHub Repository](https://github.com/jcapadocia3/Project-2)
 
-- [Project Presentation](https://docs.google.com/presentation/d/1TWedlUaTuS3mvYdcD1tdsRXQGo4JOEJ4-4qVwMbBDAE/edit?usp=sharing)
+- [Project Presentation](https://docs.google.com/presentation/d/1TWedlUaTuS3mvYdcD1tdsRXQGo4JOEJ4-4qVwMbBDAE/edit#slide=id.g29f43f0a72_0_0)
 
 <br>
 
@@ -101,8 +97,6 @@ Team G.A.F is:
 [Jamie Capadocia](https://github.com/jcapadocia3) +
 [Jeffery Wojciechowski](https://github.com/Jefferywojo98) + 
 [Sadie Sial](https://github.com/sadielinks)
-
-<br>
 
 ## License
 
