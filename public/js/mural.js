@@ -10,10 +10,8 @@ function parseUrl () {
 
 const commentHandler = async (event) => {
   event.preventDefault()
-  // document.location.replace('/home');
 
   const comment = document.querySelector("#commentInput").value.trim();
-  // const idArray = [];
 
   if (comment) {
     const id = parseUrl();

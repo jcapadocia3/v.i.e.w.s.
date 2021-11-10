@@ -38,16 +38,6 @@ Review.init(
         key: "id",
       },
     },
-
-    // foreign key from user.js
-    // user_name: {
-    //   type: DataTypes.STRING,
-    //   // user.name
-    //   references: {
-    //     model: 'user',
-    //     key: 'name',
-    //   },
-    //   }
   },
 
   {
