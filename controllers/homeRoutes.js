@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Mural, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
-// const homepage = require('../public/html/homepage.html');
 
 const muralData = null;
 
