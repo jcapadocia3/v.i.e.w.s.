@@ -115,10 +115,6 @@ router.get('/review', async (req, res) => {
 router.post('/review', async (req, res) => {
   try {
     // Get all murals and JOIN with user data
-    // const reviewData = await Review.create({
-    //   ...req.body,
-      // rating: req.body.rating,
-      // user_id: req.session.user_id,
       const reviewData = await Review.create({...req.body, user_id: req.session.user_id});
       res.status(200).json(reviewData);
     
