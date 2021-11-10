@@ -10,7 +10,6 @@ ___
 
 * [Description](#description)
 * [Installation](#installation)
-* [Usage](#usage)
 * [Technologies](#technologies)
 * [Screenshots](#screenshots)
 * [Links](#links)
@@ -60,22 +59,16 @@ THEN I am directed back to the login page in which thhe app will have limited fu
 ## Installation
 - As this is a full deployed app on Heroku, no installation is required to begin using the app. Simply visit <a href="https://peaked-project.herokuapp.com/">this link</a> and enjoy!
 
-
-## Usage
-- 
-
-
 ## Technologies
 
 ### The technologies used to create this program were: 
-- bcrypt
-- bulma
-- cloudinary
-- dotenv
-- express
-- express-handlebars
-- multer
-- mysql2
+- Bcrypt
+- Bulma
+- Cloudinary
+- Dotenv
+- Express
+- Handlebars
+- MySql
 
 <br><br>
 
@@ -86,9 +79,9 @@ Initial Mobile Display   |  Results Mobile Display
 ![Screenshot](assets/images/screenshot.png)  |  ![Screenshot](assets/images/screenshot.png)
 
 
-Initial Desktop Display:
+Initial Desktop Display: ![Screenshot](assets/images/desktoplogin.png)
 
-Results Desktop Display:
+Results Desktop Display: ![Screenshot](assets/images/desktopmuralpage.png)
 
 <br>
 
