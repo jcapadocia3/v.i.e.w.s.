@@ -42,7 +42,6 @@ $("#mural-search-button1").on("click", function (e) {
     }
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
-      //   console.log(data[i]);
       muralArray.push(data[i]);
 
       let makeMuralOutput =
@@ -59,20 +58,16 @@ $("#mural-search-button1").on("click", function (e) {
         data[i].street_address +
         " Chicago, IL           " +
         data[i].zip +
-        "<br><br>";
+        "<br><br>" +
+        `<img style="display=center src="$" width="200" height="300">` +
+        "<br><br><br>";
 
       let html = `<tr><td> ${makeMuralOutput} </td></tr>`;
       $("#tablebody1").append(html);
     }
   });
-  // console.log(muralArray)
 });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// handler for mural title:
-// document.querySelector(".").addEventListener("click", commentHandler);
 
 // mural search by title:
 $("#mural-title-button").on("click", function (e) {
@@ -90,11 +85,8 @@ $("#mural-title-button").on("click", function (e) {
       $$app_token: "wuWBoPJo0VvB887VUDjq8qYJ8",
     },
   }).done(function (data) {
-    // alert("Retrieved " + data.length + " records from the dataset!");
-    console.log(data);
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
-      //   console.log(data[i]);
       muralArray.push(data[i]);
 
       let makeTitleOutput =
@@ -111,11 +103,12 @@ $("#mural-title-button").on("click", function (e) {
         data[i].street_address +
         " Chicago, IL           " +
         data[i].zip +
-        "<br><br>";
+        "<br><br>" +
+        `<img style="display=center src="$" width="200" height="300">` +
+        "<br><br><br>";
 
       let html = `<tr><td> ${makeTitleOutput} </td></tr>`;
       $("#tablebody1").append(html);
     }
   });
-  console.log(muralArray);
 });
