@@ -14,7 +14,7 @@
 
 <main>
   <div class="input-group search-form">
-    <input id="search-input" class="form-control" type="text" placeholder="Search" aria-label="Search" />
+    <input id="search-input" class="form-control" type="text" placeholder="search by..." aria-label="Search" />
   </div>
   <div class="container">
     <div class="row">
@@ -31,20 +31,21 @@
     <div class="left-body container">
       <div class="muralImgs container">
         <h2 class="muralImgsTitle">mural images</h2>
-
         {{!-- begin cloudinary code --}}
         <div class="cloudinaryCon">
           <button id="upload_widget" class="btn btn-primary search-button-color">upload image</button>
         </div>
+        <div id="cloudImg">
+        </div>
         <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-
         <script type="text/javascript">
           var myWidget = cloudinary.createUploadWidget({
             cloudName: 'dqjpkb3xf',
             uploadPreset: 'wk3fcptv'
           }, (error, result) => {
             if (!error && result && result.event === "success") {
-              console.log('Done! Here is the image info: ', result.info);
+              console.log(result.info);
+              $("#cloudImg").append(`<img src="${result.info.secure_url}" alt="text" width="X" height="X">`);
             }
           }
           )

@@ -6,13 +6,10 @@ const queryURL =
 const userSearch = "";
 const myData = undefined;
 
-// decalre variables based on html
+// declare variables based on html
 const searchMuralBtn = $("mural-search-button");
 const table = $(".table-section2");
 const searchInput = $("#search-input1");
-// save searches
-// const table2 = $(".table-section2");
-// const appendSearch = $(".search-wrapper");
 
 // mural search:
 const muralArray = [];
@@ -31,25 +28,6 @@ $("#mural-search-button1").on("click", function (e) {
       $$app_token: "wuWBoPJo0VvB887VUDjq8qYJ8",
     },
   }).done(function (data) {
-    // alert("Retrieved " + data.length + " records from the dataset!");
-    // console.log(data);
-    `<div id="myModal" class="modal fade" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Mural Results</h5>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <!-- Content will be loaded here from "remote.php" file -->
-            <p> we found {{data.length}} records from the dataset</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>`;
     if (data.length === 0) {
       let noMuralOut =
         "zip code " + callData + " does not contain any murals :(";
@@ -114,17 +92,6 @@ $("#mural-title-button").on("click", function (e) {
   }).done(function (data) {
     // alert("Retrieved " + data.length + " records from the dataset!");
     console.log(data);
-    if (data.length === 0) {
-      //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
-      //   $("#tablebody1").empty();
-      //   $("#tablebody1").append(noMuralOut);
-      $(document).ready(function () {
-        // $("#myModal").on("show.bs.modal", function(event){
-        //   // Place the returned HTML into the selected element
-        //   $(this).find(".modal-body");
-        // });
-      });
-    }
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
       //   console.log(data[i]);
