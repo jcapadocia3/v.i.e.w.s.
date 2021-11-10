@@ -85,7 +85,6 @@ $("#mural-search-button").on("click", function (e) {
   }
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
-      //   console.log(data[i]);
       muralArray.push(data[i]);
 
       let makeMuralOutput =
@@ -110,14 +109,7 @@ $("#mural-search-button").on("click", function (e) {
       $("#tablebody").append(html);
     }
   });
-  // console.log(muralArray)
 });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// handler for mural title:
-// document.querySelector(".").addEventListener("click", commentHandler);
 
 // mural search by title:
 $("#mural-title-button").on("click", function (e) {
@@ -140,7 +132,7 @@ $("#mural-title-button").on("click", function (e) {
     for (let i = 0; i < data.length; i++) {
       muralArray.push(data[i]);
 
-      let makeMuralOutput =
+      let makeTitleOutput =
         `<span class="muralStuff">Mural Title: </span>` +
         data[i].artwork_title +
         "<br>" +

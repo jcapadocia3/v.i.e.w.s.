@@ -89,7 +89,7 @@ $("#mural-title-button").on("click", function (e) {
     for (let i = 0; i < data.length; i++) {
       muralArray.push(data[i]);
 
-      let makeMuralOutput =
+      let makeTitleOutput =
         `<span class="muralStuff">Mural Title: </span>` +
         data[i].artwork_title +
         "<br>" +

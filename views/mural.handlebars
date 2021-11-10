@@ -44,7 +44,6 @@
             uploadPreset: 'wk3fcptv'
           }, (error, result) => {
             if (!error && result && result.event === "success") {
-              console.log(result.info);
               $("#cloudImg").append(`<img src="${result.info.secure_url}" alt="text" width="X" height="X">`);
             }
           }

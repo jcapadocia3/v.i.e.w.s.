@@ -1,5 +1,4 @@
 const loginFormHandler = async (event) => {
-  console.log("CLICK!");
   event.preventDefault();
 
   const email = document.querySelector("#email-login").value.trim();
@@ -15,7 +14,6 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/home/users/:id");
       console.log("User logged in");
-      console.log(session);
     } else {
       alert(response.statusText);
     }
