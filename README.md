@@ -85,7 +85,7 @@ Results Desktop Display: ![Screenshot](assets/images/desktopafter.png)
 
 - [Heroku](https://peaked-project.herokuapp.com/)
 
-- [GitHub Repository](https://github.com/jcapadocia3/Project-2)
+- [GitHub Repository](https://github.com/jcapadocia3/v.i.e.w.s.)
 
 - [Project Presentation](https://docs.google.com/presentation/d/1TWedlUaTuS3mvYdcD1tdsRXQGo4JOEJ4-4qVwMbBDAE/edit#slide=id.g29f43f0a72_0_0)
 
