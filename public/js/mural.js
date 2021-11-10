@@ -4,15 +4,11 @@ function parseUrl () {
   const url = location.href;
   // snip snip
   const params = url.split('/');
-  // check if the URL has the mural id params we need for review
-  console.log('parse +++', params);
   // if the url params pass, then please append the review left to the corresponding container
   return params == null ? 1 : params[params.length - 1];
 }
 
 const commentHandler = async (event) => {
-  console.log("raddddddd!");
-  // debugger;
   event.preventDefault()
   // document.location.replace('/home');
 
@@ -140,14 +136,11 @@ $("#mural-title-button").on("click", function (e) {
     },
   })
   .done(function (data) {
-    // alert("Retrieved " + data.length + " records from the dataset!");
-    console.log(data);
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
-      //   console.log(data[i]);
       muralArray.push(data[i]);
 
-      let makeTitleOutput =
+      let makeMuralOutput =
         `<span class="muralStuff">Mural Title: </span>` +
         data[i].artwork_title +
         "<br>" +
@@ -161,11 +154,12 @@ $("#mural-title-button").on("click", function (e) {
         data[i].street_address +
         " Chicago, IL           " +
         data[i].zip +
-        "<br><br>";
+        "<br><br>" +
+        `<img style="display=center src="$" width="200" height="300">` +
+        "<br><br><br>";
 
       let html = `<tr><td> ${makeTitleOutput} </td></tr>`;
       $("#tablebody").append(html);
     }
   });
-  console.log(muralArray)
 });

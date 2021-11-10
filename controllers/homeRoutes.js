@@ -121,7 +121,6 @@ router.post('/review', async (req, res) => {
     //   ...req.body,
       // rating: req.body.rating,
       // user_id: req.session.user_id,
-      console.log(req.body);
       const reviewData = await Review.create({...req.body, user_id: req.session.user_id});
       res.status(200).json(reviewData);
     

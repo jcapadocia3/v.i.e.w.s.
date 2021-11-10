@@ -89,7 +89,7 @@ $("#mural-title-button").on("click", function (e) {
     for (let i = 0; i < data.length; i++) {
       muralArray.push(data[i]);
 
-      let makeTitleOutput =
+      let makeMuralOutput =
         `<span class="muralStuff">Mural Title: </span>` +
         data[i].artwork_title +
         "<br>" +
@@ -103,7 +103,9 @@ $("#mural-title-button").on("click", function (e) {
         data[i].street_address +
         " Chicago, IL           " +
         data[i].zip +
-        "<br><br>";
+        "<br><br>" +
+        `<img style="display=center src="$" width="200" height="300">` +
+        "<br><br><br>";
 
       let html = `<tr><td> ${makeTitleOutput} </td></tr>`;
       $("#tablebody1").append(html);

@@ -9,9 +9,6 @@ router.get('/:id', async (req, res) => {
           id: req.params.id,
         }
       });
-
-      console.log('route hit')
-
   } catch (err) {
       res.status(500).json(err);
   }
