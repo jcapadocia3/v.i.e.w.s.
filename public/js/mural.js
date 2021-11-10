@@ -1,32 +1,3 @@
-// // image upload - npm cloudinary
-// const cloudinaryAPI = 'https://api.cloudinary.com/v1_1/dqjpkb3xf/mh/upload';
-// const cloudinaryUploadPreset = 'wk3fcptv/mh/upload';
-// // const imgPreview = document.getElementById('')
-
-// const url = cloudinaryAPI;
-// const options = {
-//   method: 'POST',
-//   headers: {
-//     'Accept': 'application/json',
-//     'Content-Type': 'application/json;charset=UTF-8'
-//   },
-//   body: JSON.stringify({
-//     a: 10,
-//     b: 20
-//   })
-// };
-
-// fetch(url, options)
-//   .then(response => {
-//     console.log(response.status);
-//   });
-
-// // cloudinary.uploader.upload_stream(
-// //   { agent: myAgent },
-// //   function(error, result) { console.log(result); }
-// // );
-
-
 // create a fx to have review body appear in matching mural id container
 function parseUrl () {
   // takes current url
@@ -81,9 +52,6 @@ const myData = undefined;
 const searchMuralBtn = $("mural-search-button");
 const table = $(".table-section");
 const searchInput = $("#search-input");
-// save searches
-// const table2 = $(".table-section2");
-// const appendSearch = $(".search-wrapper");
 
 // the array the WEB API will appened into
 const muralArray = [];
@@ -108,25 +76,6 @@ $("#mural-search-button").on("click", function (e) {
     },
   })
   .done(function (data) {
-    // alert("Retrieved " + data.length + " records from the dataset!");
-    // console.log(data);
-    `<div id="myModal" class="modal fade" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Mural Results</h5>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <!-- Content will be loaded here from "remote.php" file -->
-          <p> we found {{data.length}} records from the dataset</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>`
   if (data.length === 0) {
     let noMuralOut = "zip code " + callData + " does not contain any murals :(";
     $("#tablebody").empty();
@@ -191,17 +140,6 @@ $("#mural-title-button").on("click", function (e) {
   .done(function (data) {
     // alert("Retrieved " + data.length + " records from the dataset!");
     console.log(data);
-    if (data.length === 0) {
-    //   let noMuralOut = "Zip Code" + callData + "does not contain any murals";
-    //   $("#tablebody").empty();
-    //   $("#tablebody").append(noMuralOut);
-    $(document).ready(function(){
-      // $("#myModal").on("show.bs.modal", function(event){
-      //   // Place the returned HTML into the selected element
-      //   $(this).find(".modal-body");
-      // });
-    });
-  }
     // FOR any results, display as such:
     for (let i = 0; i < data.length; i++) {
       //   console.log(data[i]);
